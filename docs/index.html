@@ -3,37 +3,137 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI in Finance Workshop, University of Zurich</title>
+<title>AI in Finance, University of Zurich</title>
 <style>
-  :root { --ink: #36393B; --muted: #6b6e71; --rule: #d9d6d8; --mint: #3AEFCC; --mint-deep: #12a88b; }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: #fff; color: var(--ink); font: 18px/1.5 "Avenir Next", "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-  main { max-width: 46rem; margin: 0 auto; padding: 3rem 1rem; border-top: 8px solid var(--mint); }
-  h1 { font-size: 1.8rem; font-weight: 600; line-height: 1.25; margin: 0 0 .25rem; }
-  h2 { font-size: 1.1rem; font-weight: 600; margin: 2.25rem 0 .5rem; }
-  p { margin: 0; color: var(--muted); }
-  ul { list-style: none; margin: 0; padding: 0; }
-  li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; padding: .6rem 0; border-bottom: 1px solid var(--rule); }
-  a { color: var(--mint-deep); }
+  :root {
+    --navy: #00205B; --gold: #b8912f; --ink: #1a1a1a; --gray: #444444;
+    --mut: #6b6b6b; --line: #e4e4e4; --panel: #f6f7f9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fff; color: var(--ink); font-family: "Helvetica Neue", Arial, sans-serif; }
+  .sheet { max-width: 1080px; margin: 0 auto; padding: 64px 72px 40px; }
+  .eyebrow { text-align: center; font-size: 20px; letter-spacing: 5px; text-transform: uppercase; color: var(--navy); font-weight: 700; margin-bottom: 26px; }
+  .meta { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 22px; font-size: 21px; color: #333; }
+  .meta .dot { color: var(--gold); font-weight: 700; }
+  .subline { text-align: center; font-size: 21px; color: #555; margin: 4px 0 8px; }
+  .subline b { color: var(--ink); }
+  .rule { height: 3px; border-radius: 2px; margin-bottom: 30px; background: linear-gradient(90deg, var(--navy) 0 62%, var(--gold) 62% 100%); }
+  .label { font-size: 17px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin: 24px 0 14px; }
+  .item { display: flex; gap: 18px; align-items: flex-start; padding: 9px 0; }
+  .chip { flex: 0 0 150px; background: var(--navy); color: #fff; font-size: 16px; font-weight: 700; letter-spacing: 1px; text-align: center; padding: 15px 0; border-radius: 6px; }
+  .body { flex: 1; min-width: 0; }
+  details { position: relative; }
+  summary {
+    display: inline-flex; align-items: baseline; gap: 10px; cursor: pointer; list-style: none;
+    font-size: 22px; font-weight: 700; color: var(--navy); line-height: 1.25;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: ""; flex: none; width: 9px; height: 9px; margin-left: 2px; position: relative; top: -3px;
+    border-right: 2.5px solid var(--gold); border-bottom: 2.5px solid var(--gold); transform: rotate(45deg);
+    transition: transform .12s;
+  }
+  details[open] summary::after { transform: rotate(225deg); top: 1px; }
+  summary:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  summary:focus-visible, .menu a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .menu {
+    position: absolute; left: 0; top: calc(100% + 6px); z-index: 10; min-width: 150px; overflow: hidden;
+    background: #fff; border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 6px 18px rgba(0, 32, 91, .16);
+  }
+  .menu a { display: block; padding: 10px 16px; font-size: 18px; font-weight: 700; color: var(--navy); text-decoration: none; }
+  .menu a + a { border-top: 1px solid var(--line); }
+  .menu a:hover { background: var(--panel); }
+  .desc { font-size: 18px; color: var(--gray); line-height: 1.4; margin-top: 2px; }
+  .foot { margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px 20px; justify-content: space-between; align-items: center; }
+  .foot .org { font-size: 23px; font-weight: 700; color: var(--navy); }
+  .foot .note { font-size: 18px; color: var(--mut); }
+  @media (max-width: 640px) {
+    .sheet { padding: 36px 18px 28px; }
+    .eyebrow { font-size: 15px; letter-spacing: 3px; }
+    .meta, .subline { font-size: 17px; }
+    .item { flex-direction: column; gap: 8px; padding: 12px 0; }
+    .chip { flex: none; padding: 7px 14px; font-size: 14px; }
+    summary { font-size: 20px; }
+    .desc { font-size: 16px; }
+    .foot .org { font-size: 19px; }
+    .foot .note { font-size: 15px; }
+  }
 </style>
 </head>
 <body>
-<main>
-  <h1>AI in Finance Workshop</h1>
-  <p>Kerry Back, Rice University. Department of Finance, University of Zurich, November 2026.</p>
+  <main class="sheet">
+    <div class="eyebrow">University of Zurich &nbsp;&middot;&nbsp; November 4&ndash;5, 2026</div>
+    <div class="meta">
+      <span>Department of Finance</span>
+      <span class="dot">&bull;</span>
+      <span>AI in finance</span>
+    </div>
+    <div class="subline">led by <b>Kerry Back</b>, Rice University</div>
+    <div class="rule"></div>
 
-  <h2>Slides</h2>
-  <ul>
-    <li><a href="session1.html">Session 1: The finance curriculum in the age of AI</a> <a href="pdf/session1.pdf">PDF</a></li>
-    <li><a href="session2.html">Session 2: Teaching AI for Finance</a> <a href="pdf/session2.pdf">PDF</a></li>
-    <li><a href="session3.html">Session 3: Using AI in Quant Finance</a> <a href="pdf/session3.pdf">PDF</a></li>
-  </ul>
+    <h1 class="label">Slides</h1>
 
-  <h2>Two-stage DCF example</h2>
-  <ul>
-    <li><a href="jbss.html">Interactive page</a></li>
-    <li><a href="jbss.xlsx">Workbook</a></li>
-  </ul>
-</main>
+    <div class="item">
+      <div class="chip">SESSION 1</div>
+      <div class="body">
+        <details>
+          <summary>The finance curriculum in the age of AI</summary>
+          <div class="menu">
+            <a href="session1.html">HTML</a>
+            <a href="pdf/session1.pdf">PDF</a>
+          </div>
+        </details>
+        <div class="desc">Data, what employers want, critical thinking, Excel, skills and plugins, and teaching finance.</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="chip">SESSION 2</div>
+      <div class="body">
+        <details>
+          <summary>Teaching AI for Finance</summary>
+          <div class="menu">
+            <a href="session2.html">HTML</a>
+            <a href="pdf/session2.pdf">PDF</a>
+          </div>
+        </details>
+        <div class="desc">Job postings, AI fluency, agents, prompting, vibe coding, skills, plugins, MCP, and custom agents.</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="chip">SESSION 3</div>
+      <div class="body">
+        <details>
+          <summary>Using AI in Quant Finance</summary>
+          <div class="menu">
+            <a href="session3.html">HTML</a>
+            <a href="pdf/session3.pdf">PDF</a>
+          </div>
+        </details>
+        <div class="desc">Who benefits, working with AI on Python, failures that raise no error, and from scripts to systems.</div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <span class="org">Department of Finance, UZH</span>
+      <span class="note">University of Zurich &nbsp;&middot;&nbsp; Nov 4&ndash;5, 2026</span>
+    </div>
+  </main>
+
+<script>
+  const menus = [...document.querySelectorAll("details")];
+  menus.forEach(d => d.addEventListener("toggle", () => {
+    if (d.open) menus.forEach(o => { if (o !== d) o.open = false; });
+  }));
+  document.addEventListener("click", e => {
+    menus.forEach(d => { if (!d.contains(e.target)) d.open = false; });
+  });
+  document.addEventListener("keydown", e => {
+    if (e.key !== "Escape") return;
+    const open = menus.find(d => d.open);
+    if (open) { open.open = false; open.querySelector("summary").focus(); }
+  });
+</script>
 </body>
 </html>
