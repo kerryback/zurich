@@ -1,0 +1,8 @@
+project:
+  output-dir: ../docs
+  resources:
+    - index.html
+    - jbss.html
+    - jbss.xlsx
+    - CNAME
+    - .nojekyll
