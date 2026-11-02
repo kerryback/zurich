@@ -1,0 +1,5 @@
+[    1394ms] TypeError: Cannot read properties of undefined (reading 'Config')
+    at http://localhost:8765/2_apps-skills.html:5174:980
+    at HTMLScriptElement.i (http://localhost:8765/2_apps-skills.html:5174:850)
+[    1392ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:8765/2_apps-skills.html#/vibe-coding:0
+[    1395ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/favicon.ico:0

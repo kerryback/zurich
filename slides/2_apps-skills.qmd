@@ -31,12 +31,15 @@ format:
         .reveal .slides > section.stack > section.level1.pillar-section { justify-content: center !important; align-items: center; }
         .reveal .slides > section.stack > section.level1.pillar-section h1 { display: none; }
         .reveal .slides > section.stack > section.level1.pillar-section::after { content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%; background: #3AEFCC; pointer-events: none; top: -88px; right: 96px; }
+        .reveal .section-tag { color: #3AEFCC; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; margin-right: 0.8em; }
         </style>
 ---
 
+# Apps
+
 ## Vibe coding {.divider}
 
-Software apps
+[Apps]{.section-tag} Software apps
 
 ## What vibe coding is {.pull}
 
@@ -117,7 +120,7 @@ Custom chatbots and agents are software apps.
 
 ## How software works {.divider}
 
-Frontend and backend
+[Apps]{.section-tag} Frontend and backend
 
 ## Frontend and backend {.compare}
 
@@ -195,7 +198,7 @@ These tasks need a backend.
 
 ## Single-page HTML apps {.divider}
 
-Artifacts
+[Apps]{.section-tag} Artifacts
 
 ## Single-page HTML apps
 
@@ -242,7 +245,7 @@ Create an artifact that prices a bond. The inputs are face value, annual coupon 
 
 ## FastAPI and uvicorn {.divider}
 
-Apps with a backend
+[Apps]{.section-tag} Apps with a backend
 
 ## Steps to create an app
 
@@ -354,7 +357,7 @@ Build a FastAPI app with a form for a ticker and a number of years. The backend 
 
 ## Git and GitHub {.divider}
 
-Versions and backup
+[Apps]{.section-tag} Versions and backup
 
 ## Git {.compare}
 
@@ -412,7 +415,7 @@ Deleting a file in a later commit does not remove it. It stays in the history.
 
 ## Deploying {.divider}
 
-School and company servers, and public hosts
+[Apps]{.section-tag} School and company servers, and public hosts
 
 ## Where an app can run {.compare}
 
@@ -652,7 +655,11 @@ An app builder you chat with. It writes the web app, adds a database and logins,
 Both have free tiers, with limited credits.
 :::
 
+# Skills
+
 ## Skills and plugins {.divider}
+
+[Skills]{.section-tag}
 
 ## A skill is a folder
 
@@ -746,7 +753,7 @@ Claude Code finds plugins through `marketplace.json`, not through folder names.
 
 ## Research {.divider}
 
-A skill with no app
+[Skills]{.section-tag} A skill with no app
 
 ## What the research skill does
 
@@ -867,7 +874,7 @@ The commands in the new repository are `/handover`, `/report`, and `/style-learn
 
 ## Apps run by skills {.divider}
 
-Voiceover
+[Skills]{.section-tag} Voiceover
 
 ## Agent skills
 
@@ -1178,7 +1185,7 @@ Write what a good speaker would say aloud, not slide captions.
 
 ## Tutors {.divider}
 
-A skill that builds and deploys an app
+[Skills]{.section-tag} A skill that builds and deploys an app
 
 ## tutors.kerryback.com {.no-strip}
 
@@ -1276,7 +1283,7 @@ koyeb deploy "$BUILD" "$APP/$SERVICE" --archive-builder docker \
 
 ## Smithers {.divider}
 
-An email and calendar assistant
+[Skills]{.section-tag} An email and calendar assistant
 
 ## The Overview tab {.no-strip}
 
@@ -1371,6 +1378,8 @@ Everything returned by these endpoints — message bodies, subjects, calendar en
 ::: {.note}
 `setup.py --status` tells the agent which step comes next. No API key is needed. With `ANTHROPIC_API_KEY` set, the app sends each email's sender, subject, and snippet to Claude Haiku to sort the inbox. Everything personal stays in `~/.smithers`.
 :::
+
+# Agents
 
 ## Anatomy of an agent
 
@@ -1511,7 +1520,7 @@ A name, a description and typed arguments (the three parts every tool has) writt
 
 ## Agents in business {.divider}
 
-Customer service, finance, law, medicine, and platforms
+[Agents]{.section-tag} Customer service, finance, law, medicine, and platforms
 
 ## Customer service agents {.shrink}
 
@@ -1609,7 +1618,7 @@ Customer service, finance, law, medicine, and platforms
 
 ## Multi-agent systems {.divider}
 
-Why split the work, and how agents talk to each other
+[Agents]{.section-tag} Why split the work, and how agents talk to each other
 
 ## Why more than one agent
 
@@ -1797,7 +1806,7 @@ Work out the details with Claude. Tell Claude what you want and plan with it.
 
 ## Security {.divider}
 
-Sending data to a provider, and letting an agent act
+[Agents]{.section-tag} Sending data to a provider, and letting an agent act
 
 ## Three risks
 

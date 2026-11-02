@@ -1,0 +1,290 @@
+- generic [active] [ref=e1]:
+  - application [ref=e2]:
+    - generic:
+      - img [aria-hidden]:
+        - heading [level=1]: Apps, skills, and agents in finance and finance education
+        - paragraph: Session 2
+        - generic:
+          - generic:
+            - generic: Kerry Back, Rice University
+            - paragraph: Department of Finance, University of Zurich
+        - paragraph: November 21, 2026
+      - generic:
+        - generic [aria-hidden]:
+          - heading [level=1]: Apps
+        - generic [ref=e3]:
+          - heading "Vibe coding" [level=2] [ref=e4]
+          - paragraph [ref=e5]: Apps Software apps
+        - generic [aria-hidden]:
+          - heading [level=2]: What vibe coding is
+          - blockquote:
+            - paragraph: There’s a new kind of coding I call “vibe coding”, where you fully give in to the vibes … and forget that the code even exists.
+          - paragraph:
+            - generic: Andrej Karpathy, February 2025
+        - generic [aria-hidden]:
+          - heading [level=2]: Building and running
+          - generic:
+            - generic:
+              - paragraph:
+                - generic: Building
+              - list:
+                - listitem: You say what the app should do
+                - listitem: AI writes the code
+                - listitem: You run it and say what to change
+            - generic:
+              - paragraph:
+                - generic: Running
+              - list:
+                - listitem: AI is used only to build the app
+                - listitem: The finished app runs without AI
+                - listitem: It does the same thing every time
+        - generic [aria-hidden]:
+          - heading [level=2]: How software works
+          - paragraph: Apps Frontend and backend
+        - generic [aria-hidden]:
+          - heading [level=2]: Single-page HTML apps
+          - paragraph: Apps Artifacts
+        - generic [aria-hidden]:
+          - heading [level=2]: FastAPI and uvicorn
+          - paragraph: Apps Apps with a backend
+        - text: → → →
+        - generic [aria-hidden]:
+          - heading [level=2]: Git and GitHub
+          - paragraph: Apps Versions and backup
+        - generic [aria-hidden]:
+          - heading [level=2]: Deploying
+          - paragraph: Apps School and company servers, and public hosts
+      - generic [aria-hidden]:
+        - generic:
+          - heading [level=1]: Skills
+        - generic [aria-hidden]:
+          - heading [level=2]: Skills and plugins
+          - paragraph: Skills
+        - generic [aria-hidden]:
+          - heading [level=2]: Research
+          - paragraph: Skills A skill with no app
+        - text: → → →
+        - generic [aria-hidden]:
+          - heading [level=2]: Apps run by skills
+          - paragraph: Skills Voiceover
+        - text: → → →
+        - generic [aria-hidden]:
+          - heading [level=2]: Tutors
+          - paragraph: Skills A skill that builds and deploys an app
+        - generic [aria-hidden]:
+          - heading [level=2]: Smithers
+          - paragraph: Skills An email and calendar assistant
+      - generic [aria-hidden]:
+        - generic:
+          - heading [level=1]: Agents
+        - text: → → →
+        - generic [aria-hidden]:
+          - heading [level=2]: Agents in business
+          - paragraph: Agents Customer service, finance, law, medicine, and platforms
+        - generic [aria-hidden]:
+          - heading [level=2]: Multi-agent systems
+          - paragraph: Agents Why split the work, and how agents talk to each other
+        - generic [aria-hidden]:
+          - heading [level=2]: What else it changes
+          - paragraph:
+            - generic: A shorter tool list
+            - text: A model choosing among four tools picks better than the same model choosing among forty.
+          - paragraph:
+            - generic: Work at the same time
+            - text: Two agents working on different parts of the question do not wait for each other.
+          - paragraph:
+            - generic: Tested on its own
+            - text: You can rewrite one agent’s prompt and test it without retesting the orchestrator.
+        - text: → →
+        - generic [aria-hidden]:
+          - heading [level=2]: Security
+          - paragraph: Agents Sending data to a provider, and letting an agent act
+        - text: → →
+        - generic [aria-hidden]:
+          - heading [level=2]: Cost
+          - paragraph: Token bills, model prices, smaller models, and one gateway
+        - generic [aria-hidden]:
+          - heading [level=2]: Seats and tokens
+          - list:
+            - listitem: Customers pay per seat per month; the provider of the agent pays the model provider per token
+            - listitem: The margin is the spread, and it moves with usage — a heavy user can cost more than they pay
+            - listitem: Prompt caching, spending caps, and cheaper models are how you defend it
+        - img [aria-hidden]:
+          - heading [level=2]: Questions?
+    - link [ref=e7] [cursor=pointer]:
+      - /url: "#"
+    - link "3 / 165" [ref=e19] [cursor=pointer]:
+      - /url: "#/vibe-coding"
+    - text: Speaker notes
+    - generic [ref=e22]: Vibe coding Apps Software apps
+  - navigation [ref=e23]:
+    - list [ref=e24]:
+      - listitem [ref=e25] [cursor=pointer]: Slides
+      - listitem [ref=e27] [cursor=pointer]: Tools
+      - listitem [ref=e29] [cursor=pointer]: Close
+    - list [ref=e32]:
+      - listitem [ref=e33] [cursor=pointer]: Apps, skills, and agents in finance and finance education
+      - listitem [ref=e34] [cursor=pointer]: Apps
+      - listitem [ref=e35] [cursor=pointer]: Vibe coding
+      - listitem [ref=e36] [cursor=pointer]: What vibe coding is
+      - listitem [ref=e37] [cursor=pointer]: Building and running
+      - listitem [ref=e38] [cursor=pointer]: Vibe coding in a course
+      - listitem [ref=e39] [cursor=pointer]: Why build software?
+      - listitem [ref=e40] [cursor=pointer]: App vs skill
+      - listitem [ref=e41] [cursor=pointer]: How software works
+      - listitem [ref=e42] [cursor=pointer]: Frontend and backend
+      - listitem [ref=e43] [cursor=pointer]: HTML, CSS, and JavaScript
+      - listitem [ref=e44] [cursor=pointer]: GET and POST
+      - listitem [ref=e45] [cursor=pointer]: What a browser cannot run
+      - listitem [ref=e46] [cursor=pointer]: Single-page HTML apps
+      - listitem [ref=e47] [cursor=pointer]: Single-page HTML apps
+      - listitem [ref=e48] [cursor=pointer]: Artifacts
+      - listitem [ref=e49] [cursor=pointer]: Pyodide
+      - listitem [ref=e50] [cursor=pointer]: "Exercise 1: a bond calculator"
+      - listitem [ref=e51] [cursor=pointer]: FastAPI and uvicorn
+      - listitem [ref=e52] [cursor=pointer]: Steps to create an app
+      - listitem [ref=e53] [cursor=pointer]: Serving locally
+      - listitem [ref=e54] [cursor=pointer]: One app, built two ways
+      - listitem [ref=e55] [cursor=pointer]: Running your app
+      - listitem [ref=e56] [cursor=pointer]: Installing Python
+      - listitem [ref=e57] [cursor=pointer]: The Windows installer
+      - listitem [ref=e58] [cursor=pointer]: "Exercise 2: a stock risk app"
+      - listitem [ref=e59] [cursor=pointer]: Git and GitHub
+      - listitem [ref=e60] [cursor=pointer]: Git
+      - listitem [ref=e61] [cursor=pointer]: GitHub
+      - listitem [ref=e62] [cursor=pointer]: Before you push
+      - listitem [ref=e63] [cursor=pointer]: Deploying
+      - listitem [ref=e64] [cursor=pointer]: Where an app can run
+      - listitem [ref=e65] [cursor=pointer]: Platform as a service
+      - listitem [ref=e66] [cursor=pointer]: Two ways to hand over the app
+      - listitem [ref=e67] [cursor=pointer]: What the repository needs
+      - listitem [ref=e68] [cursor=pointer]: What changes from localhost
+      - listitem [ref=e69] [cursor=pointer]: A Dockerfile
+      - listitem [ref=e70] [cursor=pointer]: Platform CLIs
+      - listitem [ref=e71] [cursor=pointer]: Do we need the APIs?
+      - listitem [ref=e72] [cursor=pointer]: Deploying with an agent
+      - listitem [ref=e73] [cursor=pointer]: gh and the GitHub API
+      - listitem [ref=e74] [cursor=pointer]: GitHub Pages
+      - listitem [ref=e75] [cursor=pointer]: Custom domains
+      - listitem [ref=e76] [cursor=pointer]: "Example: DNSimple"
+      - listitem [ref=e77] [cursor=pointer]: All of it in one skill
+      - listitem [ref=e78] [cursor=pointer]: Replit and Lovable
+      - listitem [ref=e79] [cursor=pointer]: Skills
+      - listitem [ref=e80] [cursor=pointer]: Skills and plugins
+      - listitem [ref=e81] [cursor=pointer]: A skill is a folder
+      - listitem [ref=e82] [cursor=pointer]: Creating a skill
+      - listitem [ref=e83] [cursor=pointer]: Plugins
+      - listitem [ref=e84] [cursor=pointer]: Plugin marketplaces
+      - listitem [ref=e85] [cursor=pointer]: Structure of a plugin marketplace
+      - listitem [ref=e86] [cursor=pointer]: The marketplace manifest
+      - listitem [ref=e87] [cursor=pointer]: Adding a marketplace
+      - listitem [ref=e88] [cursor=pointer]: Research
+      - listitem [ref=e89] [cursor=pointer]: What the research skill does
+      - listitem [ref=e90] [cursor=pointer]: Problems the skill addresses
+      - listitem [ref=e91] [cursor=pointer]: Where things live
+      - listitem [ref=e92] [cursor=pointer]: What the project remembers
+      - listitem [ref=e93] [cursor=pointer]: Two independent builds
+      - listitem [ref=e94] [cursor=pointer]: Hooks and the writing guide
+      - listitem [ref=e95] [cursor=pointer]: What you choose
+      - listitem [ref=e96] [cursor=pointer]: Four skills
+      - listitem [ref=e97] [cursor=pointer]: Apps run by skills
+      - listitem [ref=e98] [cursor=pointer]: Agent skills
+      - listitem [ref=e99] [cursor=pointer]: Plugins
+      - listitem [ref=e100] [cursor=pointer]: A skill for DCFs
+      - listitem [ref=e101] [cursor=pointer]: Deployed, or run by a skill?
+      - listitem [ref=e102] [cursor=pointer]: What voiceover does
+      - listitem [ref=e103] [cursor=pointer]: The Narration text screen
+      - listitem [ref=e104] [cursor=pointer]: The Audio settings screen
+      - listitem [ref=e105] [cursor=pointer]: Who talks to what
+      - listitem [ref=e106] [cursor=pointer]: What is in the plugin
+      - listitem [ref=e107] [cursor=pointer]: What SKILL.md tells the agent
+      - listitem [ref=e108] [cursor=pointer]: Launching the app
+      - listitem [ref=e109] [cursor=pointer]: The agent uses the app’s API
+      - listitem [ref=e110] [cursor=pointer]: The app’s routes
+      - listitem [ref=e111] [cursor=pointer]: Agent and app
+      - listitem [ref=e112] [cursor=pointer]: The narration rules
+      - listitem [ref=e113] [cursor=pointer]: Editing without starting over
+      - listitem [ref=e114] [cursor=pointer]: Keys and cost
+      - listitem [ref=e115] [cursor=pointer]: Skill or standalone app
+      - listitem [ref=e116] [cursor=pointer]: Running voiceover
+      - listitem [ref=e117] [cursor=pointer]: Tutors
+      - listitem [ref=e118] [cursor=pointer]: tutors.kerryback.com
+      - listitem [ref=e119] [cursor=pointer]: The whiteboard
+      - listitem [ref=e120] [cursor=pointer]: What the tutor skill does
+      - listitem [ref=e121] [cursor=pointer]: The review page
+      - listitem [ref=e122] [cursor=pointer]: Numbers come from tools
+      - listitem [ref=e123] [cursor=pointer]: One engine, many tutors
+      - listitem [ref=e124] [cursor=pointer]: Testing a tutor
+      - listitem [ref=e125] [cursor=pointer]: Deploying a tutor
+      - listitem [ref=e126] [cursor=pointer]: Smithers
+      - listitem [ref=e127] [cursor=pointer]: The Overview tab
+      - listitem [ref=e128] [cursor=pointer]: Agent and app
+      - listitem [ref=e129] [cursor=pointer]: The Compose tab
+      - listitem [ref=e130] [cursor=pointer]: The Calendar tab
+      - listitem [ref=e131] [cursor=pointer]: The API in SKILL.md
+      - listitem [ref=e132] [cursor=pointer]: How the limits work
+      - listitem [ref=e133] [cursor=pointer]: Mail is untrusted input
+      - listitem [ref=e134] [cursor=pointer]: Setting up Smithers
+      - listitem [ref=e135] [cursor=pointer]: Agents
+      - listitem [ref=e136] [cursor=pointer]: Anatomy of an agent
+      - listitem [ref=e137] [cursor=pointer]: Agent SDKs
+      - listitem [ref=e138] [cursor=pointer]: Three kinds of tools
+      - listitem [ref=e139] [cursor=pointer]: Custom tools
+      - listitem [ref=e140] [cursor=pointer]: MCP servers (connectors)
+      - listitem [ref=e141] [cursor=pointer]: Agents in business
+      - listitem [ref=e142] [cursor=pointer]: Customer service agents
+      - listitem [ref=e143] [cursor=pointer]: "Decagon and Intercom Fin: the company’s view"
+      - listitem [ref=e144] [cursor=pointer]: Employee service and FP&A
+      - listitem [ref=e145] [cursor=pointer]: Anaplan
+      - listitem [ref=e146] [cursor=pointer]: Legal and medical
+      - listitem [ref=e147] [cursor=pointer]: Platforms for building agents
+      - listitem [ref=e148] [cursor=pointer]: Multi-agent systems
+      - listitem [ref=e149] [cursor=pointer]: Why more than one agent
+      - listitem [ref=e150] [cursor=pointer]: What else it changes
+      - listitem [ref=e151] [cursor=pointer]: "Example: three-agent team"
+      - listitem [ref=e152] [cursor=pointer]: How they talk to each other
+      - listitem [ref=e153] [cursor=pointer]: Subagents
+      - listitem [ref=e154] [cursor=pointer]: The tool definition
+      - listitem [ref=e155] [cursor=pointer]: Giving the agent an API
+      - listitem [ref=e156] [cursor=pointer]: "Beyond one codebase: MCP and A2A"
+      - listitem [ref=e157] [cursor=pointer]: How do we build this?
+      - listitem [ref=e158] [cursor=pointer]: "Try it: a three-agent team"
+      - listitem [ref=e159] [cursor=pointer]: Security
+      - listitem [ref=e160] [cursor=pointer]: Three risks
+      - listitem [ref=e161] [cursor=pointer]: Where a prompt goes
+      - listitem [ref=e162] [cursor=pointer]: What happens to what you send
+      - listitem [ref=e163] [cursor=pointer]: What regulations require
+      - listitem [ref=e164] [cursor=pointer]: "Training and retention: contractual solutions"
+      - listitem [ref=e165] [cursor=pointer]: Run it where your data already lives
+      - listitem [ref=e166] [cursor=pointer]: Beyond the contract
+      - listitem [ref=e167] [cursor=pointer]: Prompt injection
+      - listitem [ref=e168] [cursor=pointer]: Why agents are more exposed
+      - listitem [ref=e169] [cursor=pointer]: "EchoLeak: the Copilot case"
+      - listitem [ref=e170] [cursor=pointer]: Three legs
+      - listitem [ref=e171] [cursor=pointer]: "Data exfiltration: removing a leg"
+      - listitem [ref=e172] [cursor=pointer]: A general agent and a narrow agent
+      - listitem [ref=e173] [cursor=pointer]: The system prompt and the tool code
+      - listitem [ref=e174] [cursor=pointer]: The architecture
+      - listitem [ref=e175] [cursor=pointer]: What each agent may be told
+      - listitem [ref=e176] [cursor=pointer]: Four containers, four networks
+      - listitem [ref=e177] [cursor=pointer]: Inside the data half
+      - listitem [ref=e178] [cursor=pointer]: Mechanical guards
+      - listitem [ref=e179] [cursor=pointer]: "Try it: red-team an agent"
+      - listitem [ref=e180] [cursor=pointer]: "Try it: lock the web agent"
+      - listitem [ref=e181] [cursor=pointer]: Cost
+      - listitem [ref=e182] [cursor=pointer]: The cost wall
+      - listitem [ref=e183] [cursor=pointer]: But cost is falling
+      - listitem [ref=e184] [cursor=pointer]: "The frontier: closed weights"
+      - listitem [ref=e185] [cursor=pointer]: "The frontier: open weights"
+      - listitem [ref=e186] [cursor=pointer]: Cost per task
+      - listitem [ref=e187] [cursor=pointer]: "Comparing prices: OpenRouter"
+      - listitem [ref=e188] [cursor=pointer]: Seats and tokens
+      - listitem [ref=e189] [cursor=pointer]: Where each tier stands today
+      - listitem [ref=e190] [cursor=pointer]: Not every job needs the largest model
+      - listitem [ref=e191] [cursor=pointer]: Fine tuning by distillation
+      - listitem [ref=e192] [cursor=pointer]: What fits on hardware you own
+      - listitem [ref=e193] [cursor=pointer]: One key, one log
+      - listitem [ref=e194] [cursor=pointer]: What gets added on top
+      - listitem [ref=e195] [cursor=pointer]: Six rules for a group of ten
+      - listitem [ref=e196] [cursor=pointer]: A separate course
+      - listitem [ref=e197] [cursor=pointer]: Questions?
