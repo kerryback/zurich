@@ -1,0 +1,119 @@
+- generic [active] [ref=f6e1]:
+  - application [ref=f6e2]:
+    - generic:
+      - img [ref=f6e3]:
+        - heading "The finance curriculum in the age of AI" [level=1] [ref=f6e4]: The finance curriculumin the age of AI
+        - paragraph [ref=f6e5]: Session 1
+        - generic [ref=f6e7]:
+          - generic [ref=f6e8]: Kerry Back, Rice University
+          - paragraph [ref=f6e9]: Department of Finance, University of Zurich
+        - paragraph [ref=f6e10]: November 4, 2026
+      - generic [aria-hidden]:
+        - heading [level=2]: Pillars of a finance education
+        - img:
+          - generic: Strong
+          - generic: fundamentals
+          - generic: Critical
+          - generic: thinking
+          - generic: AI
+          - generic: expertise
+      - generic [aria-hidden]:
+        - heading [level=2]: Key questions
+        - generic:
+          - list:
+            - listitem: We can now go faster (and deeper). How much faster?
+            - listitem: How much Excel?
+            - listitem: How much Python?
+      - generic [aria-hidden]:
+        - heading [level=2]: What employers want
+        - paragraph: Job postings, a hiring survey, and JP Morgan
+      - generic [aria-hidden]:
+        - heading [level=2]: From makers to checkers
+        - blockquote:
+          - paragraph: Waldron said that workers would shift from being creators of reports or software updates, or “makers” in his terminology, to “checkers” or managers of AI agents doing that work.
+        - paragraph:
+          - generic:
+            - link:
+              - /url: https://www.cnbc.com/2025/09/30/jpmorgan-chase-fully-ai-connected-megabank.html
+              - text: CNBC
+            - text: on JP Morgan Chief Analytics Officer Derek Waldron, September 30, 2025
+    - link [ref=f6e12] [cursor=pointer]:
+      - /url: "#"
+    - link "1 / 68" [ref=f6e18] [cursor=pointer]:
+      - /url: "#/title-slide"
+    - text: Speaker notes
+    - generic [ref=f6e20]: The finance curriculum in the age of AI Session 1 Kerry Back, Rice University Department of Finance, University of Zurich November 4, 2026
+  - navigation [ref=f6e21]:
+    - list [ref=f6e22]:
+      - listitem [ref=f6e23] [cursor=pointer]: Slides
+      - listitem [ref=f6e25] [cursor=pointer]: Tools
+      - listitem [ref=f6e27] [cursor=pointer]: Close
+    - list [ref=f6e30]:
+      - listitem [ref=f6e31] [cursor=pointer]: The finance curriculumin the age of AI
+      - listitem [ref=f6e32] [cursor=pointer]: Pillars of a finance education
+      - listitem [ref=f6e33] [cursor=pointer]: Key questions
+      - listitem [ref=f6e34] [cursor=pointer]: Math practice with GPT-4
+      - listitem [ref=f6e35] [cursor=pointer]: Learning a new library with AI
+      - listitem [ref=f6e36] [cursor=pointer]: Writing essays with ChatGPT
+      - listitem [ref=f6e37] [cursor=pointer]: How much Excel?
+      - listitem [ref=f6e38] [cursor=pointer]: How much Python?
+      - listitem [ref=f6e39] [cursor=pointer]: AI and coding
+      - listitem [ref=f6e40] [cursor=pointer]: What employers want
+      - listitem [ref=f6e41] [cursor=pointer]: "Job postings: using AI"
+      - listitem [ref=f6e42] [cursor=pointer]: "Job postings: building tools"
+      - listitem [ref=f6e43] [cursor=pointer]: "Job postings: translating investment problems"
+      - listitem [ref=f6e44] [cursor=pointer]: "Job postings: checking the output"
+      - listitem [ref=f6e45] [cursor=pointer]: "Selby Jennings: The..."
+      - listitem [ref=f6e46] [cursor=pointer]: From makers to checkers
+      - listitem [ref=f6e47] [cursor=pointer]: Critical thinking
+      - listitem [ref=f6e48] [cursor=pointer]: Bank CEOs about AI
+      - listitem [ref=f6e49] [cursor=pointer]: Why AI is weaker on judgment calls
+      - listitem [ref=f6e50] [cursor=pointer]: An example of poor reasoning
+      - listitem [ref=f6e51] [cursor=pointer]: Newer models are better
+      - listitem [ref=f6e52] [cursor=pointer]: Anthropic experiment
+      - listitem [ref=f6e53] [cursor=pointer]: Results
+      - listitem [ref=f6e54] [cursor=pointer]: Knowledge workers using AI
+      - listitem [ref=f6e55] [cursor=pointer]: What doesn’t affect reliance on AI
+      - listitem [ref=f6e56] [cursor=pointer]: What does affect reliance on AI
+      - listitem [ref=f6e57] [cursor=pointer]: A possible CLAUDE.md section
+      - listitem [ref=f6e58] [cursor=pointer]: Prompting
+      - listitem [ref=f6e59] [cursor=pointer]: Teaching students to check AI work
+      - listitem [ref=f6e60] [cursor=pointer]: Data
+      - listitem [ref=f6e61] [cursor=pointer]: What an MCP server is
+      - listitem [ref=f6e62] [cursor=pointer]: What “exposes tools” means
+      - listitem [ref=f6e63] [cursor=pointer]: What a server sends for one tool
+      - listitem [ref=f6e64] [cursor=pointer]: End-of-day prices
+      - listitem [ref=f6e65] [cursor=pointer]: Intraday and real-time prices
+      - listitem [ref=f6e66] [cursor=pointer]: Statements and fundamentals
+      - listitem [ref=f6e67] [cursor=pointer]: SEC filings and earnings calls
+      - listitem [ref=f6e68] [cursor=pointer]: Insider trades and holdings
+      - listitem [ref=f6e69] [cursor=pointer]: Options
+      - listitem [ref=f6e70] [cursor=pointer]: Factors, macro, and energy
+      - listitem [ref=f6e71] [cursor=pointer]: European equities
+      - listitem [ref=f6e72] [cursor=pointer]: Creating an MCP server
+      - listitem [ref=f6e73] [cursor=pointer]: Deliverables
+      - listitem [ref=f6e74] [cursor=pointer]: AI outputs
+      - listitem [ref=f6e75] [cursor=pointer]: New student deliverables
+      - listitem [ref=f6e76] [cursor=pointer]: "Two-stage DCF: HTML page"
+      - listitem [ref=f6e77] [cursor=pointer]: "Two-stage DCF: workbook"
+      - listitem [ref=f6e78] [cursor=pointer]: "Tangency Portfolio: App"
+      - listitem [ref=f6e79] [cursor=pointer]: "Tangency Portfolio: Workbook"
+      - listitem [ref=f6e80] [cursor=pointer]: Critical thinking again
+      - listitem [ref=f6e81] [cursor=pointer]: Automate the mechanical stuff
+      - listitem [ref=f6e82] [cursor=pointer]: "Valuation: skill"
+      - listitem [ref=f6e83] [cursor=pointer]: Skills and plugins
+      - listitem [ref=f6e84] [cursor=pointer]: A skill is a folder
+      - listitem [ref=f6e85] [cursor=pointer]: Creating a skill
+      - listitem [ref=f6e86] [cursor=pointer]: Plugins
+      - listitem [ref=f6e87] [cursor=pointer]: Plugin marketplaces
+      - listitem [ref=f6e88] [cursor=pointer]: Structure of a plugin marketplace
+      - listitem [ref=f6e89] [cursor=pointer]: The marketplace manifest
+      - listitem [ref=f6e90] [cursor=pointer]: Adding a marketplace
+      - listitem [ref=f6e91] [cursor=pointer]: Strong fundamentals
+      - listitem [ref=f6e92] [cursor=pointer]: Flipping the classroom
+      - listitem [ref=f6e93] [cursor=pointer]: Mini cases
+      - listitem [ref=f6e94] [cursor=pointer]: AI tutors
+      - listitem [ref=f6e95] [cursor=pointer]: AI tutor vs active-learning class
+      - listitem [ref=f6e96] [cursor=pointer]: Software
+      - listitem [ref=f6e97] [cursor=pointer]: Sandboxed agents
+      - listitem [ref=f6e98] [cursor=pointer]: Non-sandboxed versions of Claude

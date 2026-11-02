@@ -1,0 +1,11 @@
+project:
+  output-dir: docs
+  render:
+    - slides/[0-9]_*.qmd
+  post-render: flatten.py
+  resources:
+    - index.html
+    - files/**
+    - pdf/**
+    - CNAME
+    - .nojekyll

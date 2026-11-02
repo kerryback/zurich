@@ -21,6 +21,7 @@
   .label { font-size: 17px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin: 24px 0 14px; }
   .item { display: flex; gap: 18px; align-items: flex-start; padding: 9px 0; }
   .chip { flex: 0 0 150px; background: var(--navy); color: #fff; font-size: 16px; font-weight: 700; letter-spacing: 1px; text-align: center; padding: 15px 0; border-radius: 6px; }
+  .chip .when { display: block; margin-top: 3px; font-size: 14px; font-weight: 400; letter-spacing: 0; }
   .body { flex: 1; min-width: 0; }
   details { position: relative; }
   summary {
@@ -74,44 +75,43 @@
     <h1 class="label">Slides</h1>
 
     <div class="item">
-      <div class="chip">SESSION 1</div>
+      <div class="chip">SESSION 1<span class="when">Wed 2&ndash;6</span></div>
       <div class="body">
         <details>
           <summary>The finance curriculum in the age of AI</summary>
           <div class="menu">
-            <a href="session1.html">HTML</a>
-            <a href="pdf/session1.pdf">PDF</a>
+            <a href="1_curriculum.html">HTML</a>
+            <a href="pdf/1_curriculum.pdf">PDF</a>
           </div>
         </details>
-        <div class="desc">Data, what employers want, critical thinking, Excel, skills and plugins, and teaching finance.</div>
+        <div class="desc">What employers want, critical thinking, data, deliverables, skills and plugins, and strong fundamentals.</div>
       </div>
     </div>
 
     <div class="item">
-      <div class="chip">SESSION 2</div>
+      <div class="chip">SESSION 2<span class="when">Thu 9&ndash;1</span></div>
       <div class="body">
         <details>
-          <summary>Teaching AI for Finance</summary>
+          <summary>Apps, Skills, and Teaching Tools</summary>
           <div class="menu">
-            <a href="session2.html">HTML</a>
-            <a href="pdf/session2.pdf">PDF</a>
+            <a href="2_apps-skills.html">HTML</a>
+            <a href="pdf/2_apps-skills.pdf">PDF</a>
           </div>
         </details>
-        <div class="desc">Job postings, AI fluency, agents, prompting, vibe coding, skills, plugins, MCP, and custom agents.</div>
+        <div class="desc">Vibe coding, FastAPI, deployment, skills and plugins, voiceover, tutors, Smithers, and research.</div>
       </div>
     </div>
 
     <div class="item">
-      <div class="chip">SESSION 3</div>
+      <div class="chip">SESSION 3<span class="when">Thu 2&ndash;6</span></div>
       <div class="body">
         <details>
-          <summary>Using AI in Quant Finance</summary>
+          <summary>Agents, Security, and Cost</summary>
           <div class="menu">
-            <a href="session3.html">HTML</a>
-            <a href="pdf/session3.pdf">PDF</a>
+            <a href="3_agents.html">HTML</a>
           </div>
         </details>
-        <div class="desc">Who benefits, working with AI on Python, failures that raise no error, and from scripts to systems.</div>
+        <div class="desc">How agents work, MCP servers, and custom agents.</div>
       </div>
     </div>
 

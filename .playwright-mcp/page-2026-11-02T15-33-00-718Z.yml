@@ -1,0 +1,168 @@
+- generic [active] [ref=f8e1]:
+  - application [ref=f8e2]:
+    - generic:
+      - img [aria-hidden]:
+        - heading [level=1]: The finance curriculum in the age of AI
+        - paragraph: Session 1
+        - generic:
+          - generic:
+            - generic: Kerry Back, Rice University
+            - paragraph: Department of Finance, University of Zurich
+        - paragraph: November 4, 2026
+      - generic [aria-hidden]:
+        - heading [level=2]: Pillars of a finance education
+        - img:
+          - generic: Strong
+          - generic: fundamentals
+          - generic: Critical
+          - generic: thinking
+          - generic: AI
+          - generic: expertise
+      - generic [aria-hidden]:
+        - heading [level=2]: Key questions
+        - generic:
+          - list:
+            - listitem: We can now go faster (and deeper). How much faster?
+            - listitem: How much Excel?
+            - listitem: How much Python?
+      - generic [ref=f8e3]:
+        - heading "Math practice with GPT-4" [level=2] [ref=f8e4]
+        - paragraph [ref=f8e5]: "About 1,000 high school students in Turkey. Each class session had two parts:"
+        - list [ref=f8e6]:
+          - listitem [ref=f8e7]: Students solved practice problems. Each classroom was randomly given plain GPT-4, a GPT-4 tutor, or no AI.
+          - listitem [ref=f8e8]: All students then took an exam with no AI.
+        - table [ref=f8e10]:
+          - rowgroup [ref=f8e16]:
+            - row [ref=f8e17]:
+              - columnheader "Grades compared with the no-AI group" [ref=f8e18]
+              - columnheader "Practice problems" [ref=f8e19]
+              - columnheader "Exam" [ref=f8e20]
+              - columnheader "What students believed" [ref=f8e21]
+          - rowgroup [ref=f8e22]:
+            - row [ref=f8e23]:
+              - cell "Plain GPT-4" [ref=f8e24]
+              - cell "+48%" [ref=f8e25]
+              - cell "−17%" [ref=f8e26]
+              - cell "They had not learned less" [ref=f8e27]
+            - row [ref=f8e28]:
+              - cell "GPT-4 tutor (hints, not answers)" [ref=f8e29]
+              - cell "+127%" [ref=f8e30]
+              - cell "No difference" [ref=f8e31]
+              - cell "They had done better on the exam" [ref=f8e32]
+        - paragraph [ref=f8e33]:
+          - generic [ref=f8e34]: Bastani et al., “Generative AI without guardrails can harm learning,” PNAS, 2025
+      - generic [aria-hidden]:
+        - heading [level=2]: Learning a new library with AI
+        - generic:
+          - generic:
+            - paragraph:
+              - generic: 50% vs 67%
+              - generic: quiz score, AI group vs hand-coding group
+        - generic:
+          - paragraph: 52 software engineers learned Trio, an async library. The largest gap was on debugging questions. AI users who asked for explanations scored 65–86%; those who had the AI write the code scored 24–39%.
+        - paragraph:
+          - generic: Shen and Tamkin, “How AI impacts skill formation,” Anthropic, January 2026
+      - generic [aria-hidden]:
+        - heading [level=2]: Writing essays with ChatGPT
+        - generic:
+          - generic:
+            - paragraph:
+              - generic: 83% vs 11%
+              - generic: "could not quote a sentence from the essay they had just written: ChatGPT group vs the other two groups"
+        - generic:
+          - paragraph: 54 participants wrote essays with ChatGPT, with a search engine, or with no tools, wearing EEG headsets. The ChatGPT group had the weakest brain connectivity and the lowest sense of owning their essays. Preprint, not yet peer-reviewed.
+        - paragraph:
+          - generic: Kosmyna et al., “Your Brain on ChatGPT,” MIT Media Lab, 2025
+      - generic [aria-hidden]:
+        - heading [level=2]: What employers want
+        - paragraph: Job postings, a hiring survey, and JP Morgan
+      - generic [aria-hidden]:
+        - heading [level=2]: From makers to checkers
+        - blockquote:
+          - paragraph: Waldron said that workers would shift from being creators of reports or software updates, or “makers” in his terminology, to “checkers” or managers of AI agents doing that work.
+        - paragraph:
+          - generic:
+            - link:
+              - /url: https://www.cnbc.com/2025/09/30/jpmorgan-chase-fully-ai-connected-megabank.html
+              - text: CNBC
+            - text: on JP Morgan Chief Analytics Officer Derek Waldron, September 30, 2025
+    - link [ref=f8e36] [cursor=pointer]:
+      - /url: "#"
+    - link "4 / 68" [ref=f8e42] [cursor=pointer]:
+      - /url: "#/math-practice-with-gpt-4"
+    - text: Speaker notes
+    - generic [ref=f8e45]: "Math practice with GPT-4 About 1,000 high school students in Turkey. Each class session had two parts: Students solved practice problems. Each classroom was randomly given plain GPT-4, a GPT-4 tutor, or no AI. All students then took an exam with no AI. Grades compared with the no-AI group Practice problems Exam What students believed Plain GPT-4 +48% −17% They had not learned less GPT-4 tutor (hints, not answers) +127% No difference They had done better on the exam Bastani et al., “Generative AI without guardrails can harm learning,” PNAS, 2025"
+  - navigation [ref=f8e46]:
+    - list [ref=f8e47]:
+      - listitem [ref=f8e48] [cursor=pointer]: Slides
+      - listitem [ref=f8e50] [cursor=pointer]: Tools
+      - listitem [ref=f8e52] [cursor=pointer]: Close
+    - list [ref=f8e55]:
+      - listitem [ref=f8e56] [cursor=pointer]: The finance curriculumin the age of AI
+      - listitem [ref=f8e57] [cursor=pointer]: Pillars of a finance education
+      - listitem [ref=f8e58] [cursor=pointer]: Key questions
+      - listitem [ref=f8e59] [cursor=pointer]: Math practice with GPT-4
+      - listitem [ref=f8e60] [cursor=pointer]: Learning a new library with AI
+      - listitem [ref=f8e61] [cursor=pointer]: Writing essays with ChatGPT
+      - listitem [ref=f8e62] [cursor=pointer]: How much Excel?
+      - listitem [ref=f8e63] [cursor=pointer]: How much Python?
+      - listitem [ref=f8e64] [cursor=pointer]: AI and coding
+      - listitem [ref=f8e65] [cursor=pointer]: What employers want
+      - listitem [ref=f8e66] [cursor=pointer]: "Job postings: using AI"
+      - listitem [ref=f8e67] [cursor=pointer]: "Job postings: building tools"
+      - listitem [ref=f8e68] [cursor=pointer]: "Job postings: translating investment problems"
+      - listitem [ref=f8e69] [cursor=pointer]: "Job postings: checking the output"
+      - listitem [ref=f8e70] [cursor=pointer]: "Selby Jennings: The..."
+      - listitem [ref=f8e71] [cursor=pointer]: From makers to checkers
+      - listitem [ref=f8e72] [cursor=pointer]: Critical thinking
+      - listitem [ref=f8e73] [cursor=pointer]: Bank CEOs about AI
+      - listitem [ref=f8e74] [cursor=pointer]: Why AI is weaker on judgment calls
+      - listitem [ref=f8e75] [cursor=pointer]: An example of poor reasoning
+      - listitem [ref=f8e76] [cursor=pointer]: Newer models are better
+      - listitem [ref=f8e77] [cursor=pointer]: Anthropic experiment
+      - listitem [ref=f8e78] [cursor=pointer]: Results
+      - listitem [ref=f8e79] [cursor=pointer]: Knowledge workers using AI
+      - listitem [ref=f8e80] [cursor=pointer]: What doesn’t affect reliance on AI
+      - listitem [ref=f8e81] [cursor=pointer]: What does affect reliance on AI
+      - listitem [ref=f8e82] [cursor=pointer]: A possible CLAUDE.md section
+      - listitem [ref=f8e83] [cursor=pointer]: Prompting
+      - listitem [ref=f8e84] [cursor=pointer]: Teaching students to check AI work
+      - listitem [ref=f8e85] [cursor=pointer]: Data
+      - listitem [ref=f8e86] [cursor=pointer]: What an MCP server is
+      - listitem [ref=f8e87] [cursor=pointer]: What “exposes tools” means
+      - listitem [ref=f8e88] [cursor=pointer]: What a server sends for one tool
+      - listitem [ref=f8e89] [cursor=pointer]: End-of-day prices
+      - listitem [ref=f8e90] [cursor=pointer]: Intraday and real-time prices
+      - listitem [ref=f8e91] [cursor=pointer]: Statements and fundamentals
+      - listitem [ref=f8e92] [cursor=pointer]: SEC filings and earnings calls
+      - listitem [ref=f8e93] [cursor=pointer]: Insider trades and holdings
+      - listitem [ref=f8e94] [cursor=pointer]: Options
+      - listitem [ref=f8e95] [cursor=pointer]: Factors, macro, and energy
+      - listitem [ref=f8e96] [cursor=pointer]: European equities
+      - listitem [ref=f8e97] [cursor=pointer]: Creating an MCP server
+      - listitem [ref=f8e98] [cursor=pointer]: Deliverables
+      - listitem [ref=f8e99] [cursor=pointer]: AI outputs
+      - listitem [ref=f8e100] [cursor=pointer]: New student deliverables
+      - listitem [ref=f8e101] [cursor=pointer]: "Two-stage DCF: HTML page"
+      - listitem [ref=f8e102] [cursor=pointer]: "Two-stage DCF: workbook"
+      - listitem [ref=f8e103] [cursor=pointer]: "Tangency Portfolio: App"
+      - listitem [ref=f8e104] [cursor=pointer]: "Tangency Portfolio: Workbook"
+      - listitem [ref=f8e105] [cursor=pointer]: Critical thinking again
+      - listitem [ref=f8e106] [cursor=pointer]: Automate the mechanical stuff
+      - listitem [ref=f8e107] [cursor=pointer]: "Valuation: skill"
+      - listitem [ref=f8e108] [cursor=pointer]: Skills and plugins
+      - listitem [ref=f8e109] [cursor=pointer]: A skill is a folder
+      - listitem [ref=f8e110] [cursor=pointer]: Creating a skill
+      - listitem [ref=f8e111] [cursor=pointer]: Plugins
+      - listitem [ref=f8e112] [cursor=pointer]: Plugin marketplaces
+      - listitem [ref=f8e113] [cursor=pointer]: Structure of a plugin marketplace
+      - listitem [ref=f8e114] [cursor=pointer]: The marketplace manifest
+      - listitem [ref=f8e115] [cursor=pointer]: Adding a marketplace
+      - listitem [ref=f8e116] [cursor=pointer]: Strong fundamentals
+      - listitem [ref=f8e117] [cursor=pointer]: Flipping the classroom
+      - listitem [ref=f8e118] [cursor=pointer]: Mini cases
+      - listitem [ref=f8e119] [cursor=pointer]: AI tutors
+      - listitem [ref=f8e120] [cursor=pointer]: AI tutor vs active-learning class
+      - listitem [ref=f8e121] [cursor=pointer]: Software
+      - listitem [ref=f8e122] [cursor=pointer]: Sandboxed agents
+      - listitem [ref=f8e123] [cursor=pointer]: Non-sandboxed versions of Claude

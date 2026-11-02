@@ -1,0 +1,194 @@
+- generic [active] [ref=f10e1]:
+  - application [ref=f10e2]:
+    - generic:
+      - img [aria-hidden]:
+        - heading [level=1]: The finance curriculum in the age of AI
+        - paragraph: Session 1
+        - generic:
+          - generic:
+            - generic: Kerry Back, Rice University
+            - paragraph: Department of Finance, University of Zurich
+        - paragraph: November 4, 2026
+      - generic [aria-hidden]:
+        - heading [level=2]: What employers want
+        - paragraph: Job postings, a hiring survey, and JP Morgan
+      - generic [aria-hidden]:
+        - heading [level=2]: From makers to checkers
+        - blockquote:
+          - paragraph: Waldron said that workers would shift from being creators of reports or software updates, or “makers” in his terminology, to “checkers” or managers of AI agents doing that work.
+        - paragraph:
+          - generic:
+            - link:
+              - /url: https://www.cnbc.com/2025/09/30/jpmorgan-chase-fully-ai-connected-megabank.html
+              - text: CNBC
+            - text: on JP Morgan Chief Analytics Officer Derek Waldron, September 30, 2025
+      - generic [aria-hidden]:
+        - generic:
+          - img:
+            - generic: Critical
+            - generic: thinking
+        - generic [aria-hidden]:
+          - heading [level=2]: Bank CEOs about AI
+          - generic:
+            - generic:
+              - blockquote:
+                - paragraph: I need human judgment, I need human decision making, I need human accountability at the core.
+              - paragraph:
+                - generic:
+                  - text: HSBC CEO Georges Elhedery,
+                  - link:
+                    - /url: https://www.bloomberg.com/news/videos/2026-06-08/hsbc-ceo-says-bank-still-needs-human-judgment-in-ai-era-video
+                    - text: Bloomberg TV interview
+                  - text: ", June 8, 2026"
+            - generic:
+              - blockquote:
+                - paragraph: The goal is to remove the repetitive, administrative work so our people can focus on what they do best—we’re not replacing critical thinking and judgment, we’re removing the tedious, time-consuming work that gets in the way of it.
+              - paragraph:
+                - generic:
+                  - text: Customers Bank CEO Sam Sidhu, statement to
+                  - link:
+                    - /url: https://fortune.com/2026/04/28/ceo-of-customers-bank-sam-sidhu-ai-clone-lead-earnings-call-mark-zuckerberg-building-digital-twin/
+                    - text: Fortune
+                  - text: ", April 28, 2026"
+        - generic [aria-hidden]:
+          - heading [level=2]: Knowledge workers using AI
+          - blockquote:
+            - paragraph: Higher confidence in GenAI is associated with less critical thinking, while higher self-confidence is associated with more critical thinking.
+          - paragraph:
+            - generic: Lee et al., survey of 319 knowledge workers on 936 tasks, Microsoft Research and Carnegie Mellon, CHI 2025 · self-reported data
+        - generic [aria-hidden]:
+          - heading [level=2]: Data
+          - paragraph: MCP servers connect students’ agents to data
+        - generic [aria-hidden]:
+          - heading [level=2]: Deliverables
+          - paragraph: HTML pages and workbooks
+        - generic [aria-hidden]:
+          - heading [level=2]: Critical thinking again
+        - generic [aria-hidden]:
+          - heading [level=2]: Skills and plugins
+      - generic:
+        - generic [aria-hidden]:
+          - img:
+            - generic: Strong
+            - generic: fundamentals
+        - generic [aria-hidden]:
+          - heading [level=2]: Flipping the classroom
+          - generic:
+            - list:
+              - listitem: We have to expect out-of-class assignments will be done by AI.
+              - listitem: Assessing in class by cold-calling remains viable.
+              - listitem: "This suggests flipping the classroom: providing lectures beforehand and spending class time interacting (case-style teaching)."
+              - listitem: Ask students to share screens and defend their work and assumptions.
+        - generic [ref=f10e117]:
+          - heading "Mini cases" [level=2] [ref=f10e118]
+          - list [ref=f10e120]:
+            - listitem [ref=f10e121]: Use AI to write cases.
+            - listitem [ref=f10e122]: Give students 5 minutes to read.
+            - listitem [ref=f10e123]: Discuss on whiteboard.
+            - listitem [ref=f10e124]: Give students 10 minutes to do analysis with AI.
+            - listitem [ref=f10e125]: Call on students to present and explain.
+        - generic [aria-hidden]:
+          - heading [level=2]: AI tutors
+          - generic:
+            - list:
+              - listitem: AI is a great teaching tool.
+              - listitem: We can add value by controlling what it emphasizes and how it explains things.
+              - listitem: Customized AI tutors will replace textbooks.
+              - listitem:
+                - text: "Examples:"
+                - link:
+                  - /url: https://tutors.kerryback.com
+                  - text: tutors.kerryback.com
+        - generic [aria-hidden]:
+          - heading [level=2]: AI tutor vs active-learning class
+          - generic:
+            - generic:
+              - paragraph:
+                - generic: 2×
+                - generic: median learning gain, AI tutor vs active-learning class
+          - generic:
+            - paragraph: 194 students in Harvard introductory physics. Each student learned one topic from the GPT-4 tutor at home and another in class. The tutor was prompted with the instructor’s step-by-step solutions and guided students through each part of each problem.
+          - paragraph:
+            - generic: Kestin et al., “AI tutoring outperforms in-class active learning,” Scientific Reports, 2025
+        - generic [aria-hidden]:
+          - heading [level=2]: Software
+    - link [ref=f10e29] [cursor=pointer]:
+      - /url: "#"
+    - link "63 / 68" [ref=f10e132] [cursor=pointer]:
+      - /url: "#/mini-cases"
+    - text: Speaker notes
+    - generic [ref=f10e38]: Learning a new library with AI 52 software engineers who knew Python but had never used Trio, a Python library for asynchronous programming. Each engineer coded two features with Trio. One group had an AI assistant. The other group coded by hand. All engineers then took a quiz on Trio with no AI. Minutes to finish the task Quiz score AI assistant 23 50% By hand 25 67% The time difference is not significant. In the AI group, engineers who asked the AI for explanations scored 65–86%. Engineers who had the AI write or debug the code scored 24–39% . Shen and Tamkin, “How AI impacts skill formation,” Anthropic, January 2026
+  - navigation [ref=f10e39]:
+    - list [ref=f10e40]:
+      - listitem [ref=f10e41] [cursor=pointer]: Slides
+      - listitem [ref=f10e43] [cursor=pointer]: Tools
+      - listitem [ref=f10e45] [cursor=pointer]: Close
+    - list [ref=f10e48]:
+      - listitem [ref=f10e49] [cursor=pointer]: The finance curriculumin the age of AI
+      - listitem [ref=f10e50] [cursor=pointer]: Pillars of a finance education
+      - listitem [ref=f10e51] [cursor=pointer]: Key questions
+      - listitem [ref=f10e52] [cursor=pointer]: Math practice with GPT-4
+      - listitem [ref=f10e53] [cursor=pointer]: Learning a new library with AI
+      - listitem [ref=f10e54] [cursor=pointer]: Writing essays with ChatGPT
+      - listitem [ref=f10e55] [cursor=pointer]: How much Excel?
+      - listitem [ref=f10e56] [cursor=pointer]: How much Python?
+      - listitem [ref=f10e57] [cursor=pointer]: AI and coding
+      - listitem [ref=f10e58] [cursor=pointer]: What employers want
+      - listitem [ref=f10e59] [cursor=pointer]: "Job postings: using AI"
+      - listitem [ref=f10e60] [cursor=pointer]: "Job postings: building tools"
+      - listitem [ref=f10e61] [cursor=pointer]: "Job postings: translating investment problems"
+      - listitem [ref=f10e62] [cursor=pointer]: "Job postings: checking the output"
+      - listitem [ref=f10e63] [cursor=pointer]: "Selby Jennings: The..."
+      - listitem [ref=f10e64] [cursor=pointer]: From makers to checkers
+      - listitem [ref=f10e65] [cursor=pointer]: Critical thinking
+      - listitem [ref=f10e66] [cursor=pointer]: Bank CEOs about AI
+      - listitem [ref=f10e67] [cursor=pointer]: Why AI is weaker on judgment calls
+      - listitem [ref=f10e68] [cursor=pointer]: An example of poor reasoning
+      - listitem [ref=f10e69] [cursor=pointer]: Newer models are better
+      - listitem [ref=f10e70] [cursor=pointer]: Anthropic experiment
+      - listitem [ref=f10e71] [cursor=pointer]: Results
+      - listitem [ref=f10e72] [cursor=pointer]: Knowledge workers using AI
+      - listitem [ref=f10e73] [cursor=pointer]: What doesn’t affect reliance on AI
+      - listitem [ref=f10e74] [cursor=pointer]: What does affect reliance on AI
+      - listitem [ref=f10e75] [cursor=pointer]: A possible CLAUDE.md section
+      - listitem [ref=f10e76] [cursor=pointer]: Prompting
+      - listitem [ref=f10e77] [cursor=pointer]: Teaching students to check AI work
+      - listitem [ref=f10e78] [cursor=pointer]: Data
+      - listitem [ref=f10e79] [cursor=pointer]: What an MCP server is
+      - listitem [ref=f10e80] [cursor=pointer]: What “exposes tools” means
+      - listitem [ref=f10e81] [cursor=pointer]: What a server sends for one tool
+      - listitem [ref=f10e82] [cursor=pointer]: End-of-day prices
+      - listitem [ref=f10e83] [cursor=pointer]: Intraday and real-time prices
+      - listitem [ref=f10e84] [cursor=pointer]: Statements and fundamentals
+      - listitem [ref=f10e85] [cursor=pointer]: SEC filings and earnings calls
+      - listitem [ref=f10e86] [cursor=pointer]: Insider trades and holdings
+      - listitem [ref=f10e87] [cursor=pointer]: Options
+      - listitem [ref=f10e88] [cursor=pointer]: Factors, macro, and energy
+      - listitem [ref=f10e89] [cursor=pointer]: European equities
+      - listitem [ref=f10e90] [cursor=pointer]: Creating an MCP server
+      - listitem [ref=f10e91] [cursor=pointer]: Deliverables
+      - listitem [ref=f10e92] [cursor=pointer]: AI outputs
+      - listitem [ref=f10e93] [cursor=pointer]: New student deliverables
+      - listitem [ref=f10e94] [cursor=pointer]: "Two-stage DCF: HTML page"
+      - listitem [ref=f10e95] [cursor=pointer]: "Two-stage DCF: workbook"
+      - listitem [ref=f10e96] [cursor=pointer]: "Tangency Portfolio: App"
+      - listitem [ref=f10e97] [cursor=pointer]: "Tangency Portfolio: Workbook"
+      - listitem [ref=f10e98] [cursor=pointer]: Critical thinking again
+      - listitem [ref=f10e99] [cursor=pointer]: Automate the mechanical stuff
+      - listitem [ref=f10e100] [cursor=pointer]: "Valuation: skill"
+      - listitem [ref=f10e101] [cursor=pointer]: Skills and plugins
+      - listitem [ref=f10e102] [cursor=pointer]: A skill is a folder
+      - listitem [ref=f10e103] [cursor=pointer]: Creating a skill
+      - listitem [ref=f10e104] [cursor=pointer]: Plugins
+      - listitem [ref=f10e105] [cursor=pointer]: Plugin marketplaces
+      - listitem [ref=f10e106] [cursor=pointer]: Structure of a plugin marketplace
+      - listitem [ref=f10e107] [cursor=pointer]: The marketplace manifest
+      - listitem [ref=f10e108] [cursor=pointer]: Adding a marketplace
+      - listitem [ref=f10e109] [cursor=pointer]: Strong fundamentals
+      - listitem [ref=f10e110] [cursor=pointer]: Flipping the classroom
+      - listitem [ref=f10e111] [cursor=pointer]: Mini cases
+      - listitem [ref=f10e112] [cursor=pointer]: AI tutors
+      - listitem [ref=f10e113] [cursor=pointer]: AI tutor vs active-learning class
+      - listitem [ref=f10e114] [cursor=pointer]: Software
+      - listitem [ref=f10e115] [cursor=pointer]: Sandboxed agents
+      - listitem [ref=f10e116] [cursor=pointer]: Non-sandboxed versions of Claude

@@ -1,0 +1,8 @@
+[     296ms] TypeError: Cannot read properties of undefined (reading 'Config')
+    at http://localhost:8765/1_curriculum.html?v=2:3484:980
+    at HTMLScriptElement.i (http://localhost:8765/1_curriculum.html?v=2:3484:850)
+[     304ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:8765/1_curriculum.html?v=2#/learning-a-new-library-with-ai:0
+[    1575ms] TypeError: Cannot read properties of undefined (reading 'Config')
+    at http://localhost:8765/1_curriculum.html:3484:980
+    at HTMLScriptElement.i (http://localhost:8765/1_curriculum.html:3484:850)
+[    1583ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:8765/1_curriculum.html#/learning-a-new-python-library-with-ai:0

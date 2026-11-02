@@ -1,0 +1,151 @@
+- generic [active] [ref=f2e1]:
+  - application [ref=f2e2]:
+    - generic:
+      - img [aria-hidden]:
+        - heading [level=1]: The finance curriculum in the age of AI
+        - paragraph: Session 1
+        - generic:
+          - generic:
+            - generic: Kerry Back, Rice University
+            - paragraph: Department of Finance, University of Zurich
+        - paragraph: November 4, 2026
+      - generic [aria-hidden]:
+        - heading [level=2]: Key questions
+        - generic:
+          - list:
+            - listitem: We can now go faster (and deeper). How much faster?
+            - listitem: How much Excel?
+            - listitem: How much Python?
+      - generic [aria-hidden]:
+        - heading [level=2]: Math practice with GPT-4
+        - generic:
+          - generic:
+            - paragraph:
+              - generic: +48%
+              - generic: practice problems solved, with GPT-4
+          - generic:
+            - paragraph:
+              - generic: −17%
+              - generic: exam score, without GPT-4
+          - generic:
+            - paragraph:
+              - generic: No drop
+              - generic: in students’ perceived learning
+        - generic:
+          - paragraph: About 1,000 high school students in Turkey, randomized. A tutor version that gave hints, not answers, raised practice scores 127% with no exam loss. Those students overestimated their exam scores.
+        - paragraph:
+          - generic: Bastani et al., “Generative AI without guardrails can harm learning,” PNAS, 2025
+      - generic [ref=f2e3]:
+        - heading "Learning a new library with AI" [level=2] [ref=f2e4]
+        - paragraph [ref=f2e7]:
+          - generic [ref=f2e8]: 50% vs 67%
+          - generic [ref=f2e9]: quiz score, AI group vs hand-coding group
+        - paragraph [ref=f2e11]: 52 software engineers learned Trio, an async library. The largest gap was on debugging questions. AI users who asked for explanations scored 65–86%; those who had the AI write the code scored 24–39%.
+        - paragraph [ref=f2e12]:
+          - generic [ref=f2e13]: Shen and Tamkin, “How AI impacts skill formation,” Anthropic, January 2026
+      - generic [aria-hidden]:
+        - heading [level=2]: How much Excel?
+        - generic:
+          - list:
+            - listitem: Arrow keys, sum, average, stdev, correl, …
+            - listitem: The value of Excel now is to check AI’s answers.
+            - listitem:
+              - text: "Example:"
+              - link:
+                - /url: https://tangency.kerryback.com
+                - text: tangency.kerryback.com
+      - generic [aria-hidden]:
+        - heading [level=2]: How much Python?
+        - generic:
+          - list:
+            - listitem: Types, if-else, loops, functions, objects, methods, basic pandas and numpy, what’s in what library.
+            - listitem: Little need for Jupyter notebooks.
+            - listitem: Work interactively with AI instead.
+      - generic [aria-hidden]:
+        - heading [level=2]: What employers want
+        - paragraph: Job postings, a hiring survey, and JP Morgan
+      - generic [aria-hidden]:
+        - heading [level=2]: From makers to checkers
+        - blockquote:
+          - paragraph: Waldron said that workers would shift from being creators of reports or software updates, or “makers” in his terminology, to “checkers” or managers of AI agents doing that work.
+        - paragraph:
+          - generic:
+            - link:
+              - /url: https://www.cnbc.com/2025/09/30/jpmorgan-chase-fully-ai-connected-megabank.html
+              - text: CNBC
+            - text: on JP Morgan Chief Analytics Officer Derek Waldron, September 30, 2025
+    - link [ref=f2e15] [cursor=pointer]:
+      - /url: "#"
+    - link "5 / 63" [ref=f2e21] [cursor=pointer]:
+      - /url: "#/learning-a-new-library-with-ai"
+    - text: Speaker notes
+    - generic [ref=f2e24]: Learning a new library with AI 50% vs 67% quiz score, AI group vs hand-coding group 23 vs 25 minutes to finish the task (not significant) 52 software engineers learned Trio, an async library. The largest gap was on debugging questions. AI users who asked for explanations scored 65–86%; those who had the AI write the code scored 24–39% . Shen and Tamkin, “How AI impacts skill formation,” Anthropic, January 2026
+  - navigation [ref=f2e25]:
+    - list [ref=f2e26]:
+      - listitem [ref=f2e27] [cursor=pointer]: Slides
+      - listitem [ref=f2e29] [cursor=pointer]: Tools
+      - listitem [ref=f2e31] [cursor=pointer]: Close
+    - list [ref=f2e34]:
+      - listitem [ref=f2e35] [cursor=pointer]: The finance curriculumin the age of AI
+      - listitem [ref=f2e36] [cursor=pointer]: Pillars of a finance education
+      - listitem [ref=f2e37] [cursor=pointer]: Key questions
+      - listitem [ref=f2e38] [cursor=pointer]: Math practice with GPT-4
+      - listitem [ref=f2e39] [cursor=pointer]: Learning a new library with AI
+      - listitem [ref=f2e40] [cursor=pointer]: How much Excel?
+      - listitem [ref=f2e41] [cursor=pointer]: How much Python?
+      - listitem [ref=f2e42] [cursor=pointer]: AI and coding
+      - listitem [ref=f2e43] [cursor=pointer]: What employers want
+      - listitem [ref=f2e44] [cursor=pointer]: "Job postings: using AI"
+      - listitem [ref=f2e45] [cursor=pointer]: "Job postings: building tools"
+      - listitem [ref=f2e46] [cursor=pointer]: "Job postings: translating investment problems"
+      - listitem [ref=f2e47] [cursor=pointer]: "Job postings: checking the output"
+      - listitem [ref=f2e48] [cursor=pointer]: "Selby Jennings: The..."
+      - listitem [ref=f2e49] [cursor=pointer]: From makers to checkers
+      - listitem [ref=f2e50] [cursor=pointer]: Critical thinking
+      - listitem [ref=f2e51] [cursor=pointer]: Bank CEOs about AI
+      - listitem [ref=f2e52] [cursor=pointer]: Why AI is weaker on judgment calls
+      - listitem [ref=f2e53] [cursor=pointer]: An example of poor reasoning
+      - listitem [ref=f2e54] [cursor=pointer]: Newer models are better
+      - listitem [ref=f2e55] [cursor=pointer]: Anthropic experiment
+      - listitem [ref=f2e56] [cursor=pointer]: Results
+      - listitem [ref=f2e57] [cursor=pointer]: What doesn’t affect reliance on AI
+      - listitem [ref=f2e58] [cursor=pointer]: What does affect reliance on AI
+      - listitem [ref=f2e59] [cursor=pointer]: A possible CLAUDE.md section
+      - listitem [ref=f2e60] [cursor=pointer]: Prompting
+      - listitem [ref=f2e61] [cursor=pointer]: Teaching students to check AI work
+      - listitem [ref=f2e62] [cursor=pointer]: Data
+      - listitem [ref=f2e63] [cursor=pointer]: What an MCP server is
+      - listitem [ref=f2e64] [cursor=pointer]: What “exposes tools” means
+      - listitem [ref=f2e65] [cursor=pointer]: What a server sends for one tool
+      - listitem [ref=f2e66] [cursor=pointer]: End-of-day prices
+      - listitem [ref=f2e67] [cursor=pointer]: Intraday and real-time prices
+      - listitem [ref=f2e68] [cursor=pointer]: Statements and fundamentals
+      - listitem [ref=f2e69] [cursor=pointer]: SEC filings and earnings calls
+      - listitem [ref=f2e70] [cursor=pointer]: Insider trades and holdings
+      - listitem [ref=f2e71] [cursor=pointer]: Options
+      - listitem [ref=f2e72] [cursor=pointer]: Factors, macro, and energy
+      - listitem [ref=f2e73] [cursor=pointer]: European equities
+      - listitem [ref=f2e74] [cursor=pointer]: Local agent or cloud agent?
+      - listitem [ref=f2e75] [cursor=pointer]: Creating an MCP server
+      - listitem [ref=f2e76] [cursor=pointer]: Deliverables
+      - listitem [ref=f2e77] [cursor=pointer]: AI outputs
+      - listitem [ref=f2e78] [cursor=pointer]: New student deliverables
+      - listitem [ref=f2e79] [cursor=pointer]: "Two-stage DCF: HTML page"
+      - listitem [ref=f2e80] [cursor=pointer]: "Two-stage DCF: workbook"
+      - listitem [ref=f2e81] [cursor=pointer]: "Tangency Portfolio: App"
+      - listitem [ref=f2e82] [cursor=pointer]: "Tangency Portfolio: Workbook"
+      - listitem [ref=f2e83] [cursor=pointer]: Critical thinking again
+      - listitem [ref=f2e84] [cursor=pointer]: Automate the mechanical stuff
+      - listitem [ref=f2e85] [cursor=pointer]: "Valuation: skill"
+      - listitem [ref=f2e86] [cursor=pointer]: Skills and plugins
+      - listitem [ref=f2e87] [cursor=pointer]: A skill is a folder
+      - listitem [ref=f2e88] [cursor=pointer]: Creating a skill
+      - listitem [ref=f2e89] [cursor=pointer]: Plugins
+      - listitem [ref=f2e90] [cursor=pointer]: Plugin marketplaces
+      - listitem [ref=f2e91] [cursor=pointer]: Structure of a plugin marketplace
+      - listitem [ref=f2e92] [cursor=pointer]: The marketplace manifest
+      - listitem [ref=f2e93] [cursor=pointer]: Adding a marketplace
+      - listitem [ref=f2e94] [cursor=pointer]: Strong fundamentals
+      - listitem [ref=f2e95] [cursor=pointer]: Flipping the classroom
+      - listitem [ref=f2e96] [cursor=pointer]: Mini cases
+      - listitem [ref=f2e97] [cursor=pointer]: AI tutors

@@ -2,9 +2,10 @@
 .DS_Store
 
 # Private working notes: not for the public repo
-zurich-trip-emails.md
-zurich-finance-faculty.html
-aistreet-review.md
-session1-plan.md
-session1-plan.html
-mcp-finance-data.html
+private/
+**/*.quarto_ipynb
+
+/.quarto/
+
+# Render location kept for quarto preview; flatten.py publishes copies to docs/
+/docs/slides/

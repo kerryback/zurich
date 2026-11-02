@@ -1,0 +1,4 @@
+[     336ms] TypeError: Cannot read properties of undefined (reading 'Config')
+    at http://localhost:8765/1_curriculum.html?v=3:3559:980
+    at HTMLScriptElement.i (http://localhost:8765/1_curriculum.html?v=3:3559:850)
+[     345ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:8765/1_curriculum.html?v=3#/title-slide:0
