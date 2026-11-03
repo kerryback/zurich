@@ -3,7 +3,7 @@ title: "Apps, skills, and agents in finance and finance education"
 subtitle: "Session 2"
 author: "Kerry Back, Rice University"
 institute: "Department of Finance, University of Zurich"
-date: "2026-11-21"
+date: "2026-11-05"
 date-format: long
 title-slide-attributes:
   data-background-image: images/data-center.jpg
@@ -35,7 +35,7 @@ format:
         </style>
 ---
 
-# Apps
+# Apps {background-image="images/zurich-fraumuenster.jpg" background-size="40.625% 100%" background-position="right"}
 
 ## Vibe coding {.divider}
 
@@ -655,7 +655,7 @@ An app builder you chat with. It writes the web app, adds a database and logins,
 Both have free tiers, with limited credits.
 :::
 
-# Skills
+# Skills {background-image="images/zurich-grossmuenster.jpg" background-size="40.625% 100%" background-position="right"}
 
 ## Skills and plugins {.divider}
 
@@ -1379,7 +1379,221 @@ Everything returned by these endpoints — message bodies, subjects, calendar en
 `setup.py --status` tells the agent which step comes next. No API key is needed. With `ANTHROPIC_API_KEY` set, the app sends each email's sender, subject, and snippet to Claude Haiku to sort the inbox. Everything personal stays in `~/.smithers`.
 :::
 
-# Agents
+## MCP and Data {.divider}
+
+MCP servers connect students' agents to data
+
+## What an MCP server is
+
+```{=html}
+<svg viewBox="0 0 1100 420" role="img" aria-label="The user talks to the harness. The harness talks to the model and to the MCP server. The MCP server talks to the data."
+     style="display:block;margin:0.2em auto 0 auto;width:1040px;max-width:100%"
+     font-family="'Avenir Next LT Pro','Avenir Next','Nunito Sans',system-ui,sans-serif">
+  <defs>
+    <marker id="mcpd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6b6e71"/>
+    </marker>
+  </defs>
+  <g stroke="#6b6e71" stroke-width="3" fill="none" marker-end="url(#mcpd-arrow)">
+    <path d="M180 70 H388"/>
+    <path d="M390 100 H182"/>
+    <path d="M570 70 H878"/>
+    <path d="M880 100 H572"/>
+    <path d="M450 130 V298"/>
+    <path d="M510 300 V132"/>
+    <path d="M570 330 H878"/>
+    <path d="M880 360 H572"/>
+  </g>
+  <g font-size="17" fill="#36393B">
+    <text x="285" y="58" text-anchor="middle">prompt</text>
+    <text x="285" y="124" text-anchor="middle">answer</text>
+    <text x="725" y="58" text-anchor="middle">messages + tool descriptions</text>
+    <text x="725" y="124" text-anchor="middle">text or tool call</text>
+    <text x="436" y="220" text-anchor="end">tool call</text>
+    <text x="524" y="208">tool descriptions,</text>
+    <text x="524" y="232">tool results</text>
+    <text x="725" y="318" text-anchor="middle">API call or query</text>
+    <text x="725" y="384" text-anchor="middle">data</text>
+  </g>
+  <rect x="20" y="40" width="160" height="90" fill="#36393B"/>
+  <rect x="390" y="40" width="180" height="90" fill="#36393B"/>
+  <rect x="880" y="40" width="180" height="90" fill="#36393B"/>
+  <rect x="390" y="300" width="180" height="90" fill="#3AEFCC"/>
+  <rect x="880" y="300" width="180" height="90" fill="#36393B"/>
+  <g text-anchor="middle" font-size="24" font-weight="700" letter-spacing="1" fill="#ffffff">
+    <text x="100" y="94">User</text>
+    <text x="480" y="80">Harness</text>
+    <text x="970" y="80">Model</text>
+    <text x="480" y="340" fill="#36393B">MCP server</text>
+    <text x="970" y="340">Data</text>
+  </g>
+  <g text-anchor="middle" font-size="15" fill="#ffffff">
+    <text x="480" y="108">Claude Code, ChatGPT</text>
+    <text x="970" y="108">Opus, GPT, DeepSeek</text>
+    <text x="480" y="368" fill="#36393B">exposes tools</text>
+    <text x="970" y="368">or an external service</text>
+  </g>
+</svg>
+```
+
+## What "exposes tools" means
+
+::: {style="font-size: 1.1em; line-height: 1.4;"}
+- The server gives the harness a text description of each tool: name, purpose, and inputs.
+- The harness sends the descriptions to the model with each request.
+- The model returns a tool call. The harness sends it to the server, and the server runs the tool.
+:::
+
+## What a server sends for one tool
+
+```json
+{
+  "name": "french_data",
+  "description": "One table of a Ken French dataset as CSV. Returns are in decimals.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "name":  {"type": "string"},
+      "table": {"type": "integer", "default": 0}
+    },
+    "required": ["name"]
+  }
+}
+```
+
+::: {.note}
+The model sees this text, not the function's code.
+:::
+
+[Simplified from the server's response to a `tools/list` request.]{.eyebrow}
+
+## End-of-day prices {.shrink}
+
+| Server | Free coverage | Additional paid coverage | Hosted or local |
+|---|---|---|---|
+| [Shibui](https://shibui.finance/guide-best-mcp-server-stock-data) | US (NYSE, NASDAQ), 64 years; no key; fair-use limits | None listed | Hosted |
+| [Equibles](https://github.com/daniel3303/stock-market-mcp-server) | US daily bars; 100 requests/day | 10,000 or 100,000 requests/day | Hosted; local |
+| [MaverickMCP](https://github.com/wshobson/maverick-mcp) | Global, through Yahoo; no key | None | Local |
+| [EODHD](https://eodhd.com/financial-apis/mcp-server-for-financial-data-by-eodhd) | 20 calls/day; limited data | All exchanges, \$19.99/mo | Hosted |
+| [Alpha Vantage](https://www.alphavantage.co/premium/) | 25 requests/day | 75 requests/min, \$49.99/mo | Hosted; local |
+| [FMP](https://site.financialmodelingprep.com/) | 250 calls/day; end-of-day only | Global by plan, from \$29/mo | Hosted (sources disagree) |
+| [Massive](https://github.com/massive-com/mcp_massive) | US; 5 calls/min; 2 years | 20+ years, \$199/mo | Local; needs key |
+: {tbl-colwidths="[18,38,26,18]"}
+
+[Vendor pages and comparison pages, November 1, 2026. Not tested.]{.eyebrow}
+
+## Intraday and real-time prices {.shrink}
+
+| Server | Free coverage | Additional paid coverage | Hosted or local |
+|---|---|---|---|
+| [tradingview-mcp](https://github.com/atilaahmettaner/tradingview-mcp) | Live data and technicals; no key | Hosted, \$9 or \$29/mo | Local; hosted is paid |
+| [Mcprice](https://mcpmarket.com/server/mcprice) | Live stocks and ETFs (Yahoo), crypto (Binance); no key | None listed | Not confirmed |
+| [Alpha Vantage](https://www.alphavantage.co/premium/) | Delayed; 25 requests/day | 15-minute delay from \$49.99/mo; real time from \$99.99/mo | Hosted; local |
+| [EODHD](https://eodhd.com/financial-apis/mcp-server-for-financial-data-by-eodhd) | Not in the free plan as far as listed | End-of-day plus intraday, \$29.99/mo | Hosted |
+| [Equibles](https://github.com/daniel3303/stock-market-mcp-server) | None | Quotes delayed 15 minutes on Plus | Hosted only |
+| [Massive](https://github.com/massive-com/mcp_massive) | None; free plan is end-of-day | Real time and ticks from \$199/mo | Local; needs key |
+: {tbl-colwidths="[18,38,26,18]"}
+
+[Vendor pages and comparison pages, November 1, 2026. Not tested.]{.eyebrow}
+
+## Statements and fundamentals {.shrink}
+
+| Server | Free coverage | Additional paid coverage | Hosted or local |
+|---|---|---|---|
+| [Shibui](https://shibui.finance/guide-best-mcp-server-stock-data) | US statements, 35+ years; daily valuations; no key | None listed | Hosted |
+| [Equibles](https://github.com/daniel3303/stock-market-mcp-server) | US fundamentals; 100 requests/day | Higher limits; multiples and screener are hosted only | Hosted; local |
+| [FMP](https://site.financialmodelingprep.com/) | Statements and ratios, 30+ years on major names; 250 calls/day | Global by plan, from \$29/mo | Hosted (sources disagree) |
+| [EODHD](https://eodhd.com/financial-apis/mcp-server-for-financial-data-by-eodhd) | Limited data; 20 calls/day | Fundamentals, \$59.99/mo | Hosted |
+| [Alpha Vantage](https://www.alphavantage.co/premium/) | Basic fundamentals; 25 requests/day | Higher limits, \$49.99/mo | Hosted; local |
+| [sec-edgar-mcp](https://github.com/stefanoamorelli/sec-edgar-mcp) | XBRL statements with SEC links; no key | None | Local |
+| [edgar-mcp](https://github.com/danishashko/edgar-mcp) | XBRL highlights: revenue, net income, assets, EPS; no key | None | Local |
+| [MaverickMCP](https://github.com/wshobson/maverick-mcp) | Fundamentals through Yahoo; no key | None | Local |
+: {tbl-colwidths="[18,38,26,18]"}
+
+[Vendor pages and comparison pages, November 1, 2026. Not tested.]{.eyebrow}
+
+## SEC filings and earnings calls {.shrink}
+
+| Server | Free coverage | Additional paid coverage | Hosted or local |
+|---|---|---|---|
+| [Shibui](https://shibui.finance/guide-best-mcp-server-stock-data) | 6.4 million filing records, 10,000+ companies; no key | None listed | Hosted |
+| [Equibles](https://github.com/daniel3303/stock-market-mcp-server) | Filings; 100 requests/day | Higher limits; earnings calls and guidance are hosted only | Hosted; local |
+| [edgar-mcp](https://github.com/danishashko/edgar-mcp) | 10-K, 10-Q, 8-K; full-text search of about 10 years; no key | None | Local |
+| [sec-edgar-mcp](https://github.com/stefanoamorelli/sec-edgar-mcp) | Filings with SEC links; no key | None | Local |
+| [FMP](https://site.financialmodelingprep.com/) | SEC filings; 250 calls/day | From \$29/mo | Hosted (sources disagree) |
+: {tbl-colwidths="[18,38,26,18]"}
+
+[Vendor pages and comparison pages, November 1, 2026. Not tested.]{.eyebrow}
+
+## Insider trades and holdings {.shrink}
+
+| Server | Free coverage | Additional paid coverage | Hosted or local |
+|---|---|---|---|
+| [Equibles](https://github.com/daniel3303/stock-market-mcp-server) | 13F, insider, congressional, and short data; 100 requests/day | 10,000 or 100,000 requests/day | Hosted; local |
+| [sec-edgar-mcp](https://github.com/stefanoamorelli/sec-edgar-mcp) | Forms 3, 4, and 5; no key | None | Local |
+| [Finnhub](https://finnhub.io/) | Insider transactions, earnings surprises, news sentiment; about 60 calls/min | Price not confirmed | Sources disagree |
+: {tbl-colwidths="[18,38,26,18]"}
+
+[Vendor pages and comparison pages, November 1, 2026. Not tested.]{.eyebrow}
+
+## Options {.shrink}
+
+| Server | Free coverage | Additional paid coverage | Hosted or local |
+|---|---|---|---|
+| [triplom](https://github.com/triplom/financial-mcp-server) | Chains with Greeks, through Yahoo; no key for this data | None | Local; setup asks for a FRED key |
+| [Equibles](https://github.com/daniel3303/stock-market-mcp-server) | None | Delayed chains with implied volatility and Greeks on Plus | Hosted only |
+| [Massive](https://github.com/massive-com/mcp_massive) | None | Options prices without Greeks; price not confirmed | Local; needs key |
+| [Alpha Vantage](https://www.alphavantage.co/premium/) | Not confirmed | Options; plan not confirmed | Hosted; local |
+| [EODHD](https://eodhd.com/financial-apis/mcp-server-for-financial-data-by-eodhd) | Not confirmed | End-of-day options; plan not confirmed | Hosted |
+: {tbl-colwidths="[18,38,26,18]"}
+
+[Vendor pages and comparison pages, November 1, 2026. Not tested.]{.eyebrow}
+
+## Factors, macro, and energy {.shrink}
+
+| Server | Free coverage | Additional paid coverage | Hosted or local |
+|---|---|---|---|
+| [Equibles](https://github.com/daniel3303/stock-market-mcp-server) | FRED, CFTC, and CBOE data; 100 requests/day | 10,000 or 100,000 requests/day | Hosted; local |
+| [Alpha Vantage](https://www.alphavantage.co/premium/) | Macro series; 25 requests/day | Higher limits, \$49.99/mo | Hosted; local |
+| [triplom](https://github.com/triplom/financial-mcp-server) | FRED, with a free FRED key | None | Local |
+| [EIA server](https://github.com/cyanheads/eia-energy-mcp-server) | All of EIA's API v2; no key | None | Hosted; local |
+: {tbl-colwidths="[18,38,26,18]"}
+
+[Vendor pages and comparison pages, November 1, 2026. Not tested.]{.eyebrow}
+
+## European equities {.shrink}
+
+| Server | Free coverage | Additional paid coverage | Hosted or local |
+|---|---|---|---|
+| [tradingview-mcp](https://github.com/atilaahmettaner/tradingview-mcp) | Prices, screens, and technicals: Euronext, LSE, Xetra, Milan, SIX, Madrid | Hosted, \$9 or \$29/mo | Local; hosted is paid |
+| [EODHD](https://eodhd.com/financial-apis/mcp-server-for-financial-data-by-eodhd) | 20 calls/day; limited data | Prices \$19.99/mo; fundamentals \$59.99/mo | Hosted |
+| [Equibles](https://github.com/daniel3303/stock-market-mcp-server) | Director trades, fund holdings, and short positions; 100 requests/day | 10,000 or 100,000 requests/day | Hosted |
+| [esef-filings](https://glama.ai/mcp/servers/pipeworx-io/mcp-esef-filings) | Annual IFRS facts from filings.xbrl.org; no key | None | Not confirmed |
+| [eu-filings](https://github.com/openpharma-org/eu-filings-mcp-server) | ESEF filings for FR, DK, GB, LT, UA; GLEIF; no key | None | Local |
+| [Finance Database](https://www.jeroenbouma.com/projects/financedatabase/mcp) | 300,000+ symbols; no prices or statements; no key | None | Hosted; local |
+| [RegistrumUK](https://github.com/RegistrumUK/uk-companies-house-mcp) | UK Companies House; small daily caps, then a free key | Volume plans; price not confirmed | Hosted |
+: {tbl-colwidths="[18,38,26,18]"}
+
+[Vendor pages and comparison pages, November 1, 2026. Not tested.]{.eyebrow}
+
+## Creating an MCP server
+
+- AI can write MCP servers for us.
+- Each tool is a function. It can call a web API or a Python library: yfinance for Yahoo Finance and pandas-datareader for French's data library.
+
+```
+@mcp.tool()
+def french_data(name: str, table: int = 0) -> str:
+    """One table of a Ken French dataset as CSV. Returns are in decimals."""
+    data = web.DataReader(name, "famafrench", start="1900-01-01")
+    return (data[table] / 100).to_csv()
+```
+
+::: {.note}
+The docstring and type hints become the tool description on the earlier slide.
+:::
+
+# Agents {background-image="images/zurich-eth.jpg" background-size="40.625% 100%" background-position="right"}
 
 ## Anatomy of an agent
 
@@ -2474,6 +2688,176 @@ Connectors are added by decision, not by whoever wanted one
 ::: {.card .card-plum}
 A person approves anything that is sent outside the company
 :::
+:::
+
+
+## Fine-tuning {.divider background-image="images/zurich-9.jpg" background-size="40.625% 100%" background-position="right"}
+
+Changing the weights, with finance examples
+
+## Three ways to change what a model does
+
+| | What changes | Use when |
+|---|---|---|
+| Prompting | the text sent with the request | the model can do the job and needs telling |
+| Retrieval | documents put into the context | it needs facts it was not trained on |
+| Fine-tuning | the weights | the behavior has to change: a format, a style, a judgment call |
+
+::: {.note}
+Fine-tuning does not add knowledge reliably.
+:::
+
+## When fine-tuning is worth it
+
+::: {.cards .cards-3}
+::: {.card}
+[A fixed output format]{.card-title}
+
+A label, a JSON record, a field in another system. Prompting gets the format most of the time.
+:::
+
+::: {.card .card-dark}
+[Many examples, one narrow job]{.card-title}
+
+Thousands of labeled cases already exist, and the job will run millions of times.
+:::
+
+::: {.card .card-plum}
+[Cost per call]{.card-title}
+
+A small fine-tuned model can match a large prompted one on one narrow task, at a fraction of the cost per call.
+:::
+:::
+
+## Fine-tuning in finance {.shrink}
+
+| Firm | What was fine-tuned | Reported result |
+|---|---|---|
+| Bridgewater, with Thinking Machines | An open-weight model on examples labeled by its investment experts: is a document relevant, and where does the boilerplate begin | 84.7% average accuracy on six tasks; frontier models with expert prompts in the mid-to-high 70s; 13.8× cheaper per task |
+| RavenPack | Nemotron 3 Nano (4B) on labels from Nemotron 3 Super (120B) | Matched the large model on about 96% of sentence labels at 39× the throughput |
+| Balyasny | GPT-4o on hindsight-guided merger-arbitrage reports | Brier score 0.151, against 0.199 for market-implied odds |
+| JPMorgan (patent application) | An LLM with LoRA, labeled by forward-return quintiles relative to peers | Buy, hold, and sell ratings; no results reported |
+| Mantic | gpt-oss-120b, by reinforcement learning on about 10,000 yes-or-no questions | A published research experiment; Mantic sells forecasts to hedge funds |
+
+[AI Street: July 2, May 19, September 16, September 24, and October 22, 2026; Jajal et al., ICML 2026]{.eyebrow}
+
+## Bridgewater: an expert-labeled model
+
+::: {.stats}
+::: {.stat}
+[84.7%]{.stat-value}
+[average accuracy of the fine-tuned model on six relevance tasks]{.stat-label}
+:::
+::: {.stat}
+[mid-to-high 70s]{.stat-value}
+[GPT, Claude, and Gemini with expert prompts]{.stat-label}
+:::
+::: {.stat}
+[13.8×]{.stat-value}
+[lower cost per task]{.stat-label}
+:::
+:::
+
+- Tasks: is a financial article, central bank document, or research report relevant, and where does the useful part of a document or email end and the boilerplate begin.
+- When the model disagreed with a label, the example went back to Bridgewater's experts.
+
+[Bridgewater and Thinking Machines; AI Street, July 2, 2026]{.eyebrow}
+
+## Fine-tune, or not? {.compare}
+
+:::: {.columns}
+::: {.column width="50%"}
+> "A fine-tune can be justified anywhere there is a proprietary data moat, a task flow that appears fundamentally different, or a reliance on specific properties of your company that wouldn't have been represented in the training data."
+
+[Lucas Baker, head of LLM R&D, Jump Trading; AI Street, September 22, 2026]{.eyebrow}
+:::
+::: {.column width="50%"}
+> "It's built at the application layer. We haven't hit the limits of frontier models yet. Some tasks may eventually require fine-tuning or custom models, but the base models keep improving."
+
+[Ziang Fang, Man Numeric, on AlphaGPT; AI Street, December 18, 2025]{.eyebrow}
+:::
+::::
+
+## Distillation
+
+::: {.steps}
+1. Run a frontier model on your inputs and keep its answers.
+2. Treat those answers as labels.
+3. Fine-tune a small open-weights model on them.
+:::
+
+::: {.note}
+RavenPack did this with Nvidia's Nemotron models. Read a provider's terms before doing it with a commercial model's output.
+:::
+
+## Full fine-tuning and LoRA
+
+
+
+::: {.cards .cards-2}
+::: {.card}
+[Full fine-tuning]{.card-title}
+
+Each layer of a neural network starts with a matrix multiplication.  Then add a vector (bias), then apply an activation function (like $y^+$).  Example: 100 neurons in one layer and 50 in next implies $50 \times 100$ matrix.  Full fine tuning would re-optimize all 5,000 weights (plus the bias vector).  
+:::
+
+::: {.card .card-dark}
+[LoRA]{.card-title}
+
+Create a new $M \times N$ matrix as the product of $M \times K$ and $K \times N$ matrices for small $K$.  For example, $50 \times 2$ and $2 \times 100$, which is 300 parameters.  Add this to the original frozen $M\times N$ matrix. 
+:::
+:::
+
+::: {.note}
+Hu et al., 2021: low-rank adaptation.
+:::
+
+
+:::
+
+## QLoRA
+
+::: {.cards .cards-2}
+::: {.card}
+[The base model, quantized]{.card-title}
+
+Weights stored at 4 bits instead of 16. Gemma 3 1B goes from about 2 GB to about 800 MB.
+:::
+
+::: {.card .card-dark}
+[Adapters on top of it]{.card-title}
+
+The frozen weights are read at 4 bits; the small matrices train at full precision. A 70-billion-parameter model fits on one 48 GB GPU.
+:::
+:::
+
+::: {.note}
+Dettmers et al., 2023. This is what puts fine-tuning on a free Colab T4, which has 16 GB.
+:::
+
+## Hands-on: fine-tune Gemma 3 1B
+
+[Google Colab · free T4 GPU · about 15 minutes of training]{.eyebrow}
+
+::: {.steps}
+1. Load Gemma 3 1B at 4 bits.
+2. Attach rank-16 adapters to the attention layers, `q_proj` and `v_proj` only.
+3. Train on Financial PhraseBank: 2,264 news sentences that every annotator labeled the same way, positive, negative or neutral.
+4. Run three test sentences through the model before and after.
+:::
+
+[Open the notebook in Colab](https://colab.research.google.com/github/kerryback/mgmt803/blob/main/files/part8/fine-tuning-gemma.ipynb)
+
+::: {.note}
+Needs a Hugging Face account, a read token, and Google's Gemma license accepted at [huggingface.co/google/gemma-3-1b-it](https://huggingface.co/google/gemma-3-1b-it).
+:::
+
+## Exercise: fine-tune Gemma
+
+::: {.steps}
+1. Run the notebook as far as the baseline cell, and read what the base model says about the three test sentences.
+2. Train, then compare the answers before and after.
+3. The base model is about 2 GB and the saved adapter is 14 MB. Say what has to be on the serving machine for the fine-tuned model to answer, and what changes if you merge the adapter into the weights instead.
 :::
 
 ## A separate course {.shrink}
