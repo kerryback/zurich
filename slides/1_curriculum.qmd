@@ -32,6 +32,7 @@ format:
         .reveal .slides > section.stack > section.level1.pillar-section h1 { display: none; }
         .reveal .slides > section.stack > section.level1.pillar-section::after { content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%; background: #3AEFCC; pointer-events: none; top: -88px; right: 96px; }
         .reveal .slides > section.stack > section.level1.pillar-section[data-background-image]::after { right: 576px; }
+        .reveal .no-stripe table tbody tr:nth-child(odd) { background: transparent; }
         </style>
 ---
 
@@ -249,84 +250,7 @@ Kimi K3.1 Pro is an open-weights model, but its weights are not yet released.
 
 [Vals.ai, Terminal-Bench 4.0 leaderboard, updated October 29, 2026]{.eyebrow}
 
-## Key questions
-
-::: {.steps style="font-size: 1.3em; line-height: 1.5;"}
-1. We can now go faster (and deeper). How much faster?
-2. How much Excel?
-3. How much Python?
-:::
-
-## Math practice with GPT-4
-
-About 1,000 high school students in Turkey. Each class session had two parts:
-
-1. Students solved practice problems. Each classroom was randomly given plain GPT-4, a GPT-4 tutor, or no AI.
-2. All students then took an exam with no AI.
-
-::: {.comparison-table style="font-size: 1.15em; margin-top: 0.5em;"}
-| Grades compared with the no-AI group | Practice problems | Exam | What students believed |
-|---|---|---|---|
-| Plain GPT-4 | +48% | −17% | They had not learned less |
-| GPT-4 tutor (hints, not answers) | +127% | No difference | They had done better on the exam |
-:::
-
-[Bastani et al., "Generative AI without guardrails can harm learning," PNAS, 2025]{.eyebrow}
-
-## Learning a new library with AI
-
-52 software engineers who knew Python but had never used Trio, a Python library for asynchronous programming.
-
-1. Each engineer coded two features with Trio. One group had an AI assistant. The other group coded by hand.
-2. All engineers then took a quiz on Trio with no AI.
-
-::: {.comparison-table style="font-size: 1.15em; margin-top: 0.5em;"}
-| | Minutes to finish the task | Quiz score |
-|---|---|---|
-| AI assistant | 23 | 50% |
-| By hand | 25 | 67% |
-:::
-
-The time difference is not significant. In the AI group, engineers who asked the AI for explanations scored 65–86%. Engineers who had the AI write or debug the code scored [24–39%]{style="white-space:nowrap"}.
-
-[Shen and Tamkin, "How AI impacts skill formation," Anthropic, January 2026]{.eyebrow}
-
-## Writing essays with ChatGPT
-
-::: {.stats}
-::: {.stat}
-[83% vs 11%]{.stat-value}
-[could not quote a sentence from the essay they had just written: ChatGPT group vs the other two groups]{.stat-label}
-:::
-::: {.stat .fragment}
-[0 of 18]{.stat-value}
-[ChatGPT users quoted their own essay correctly]{.stat-label}
-:::
-:::
-
-::: {.note}
-54 participants wrote essays with ChatGPT, with a search engine, or with no tools, wearing EEG headsets. The ChatGPT group had the weakest brain connectivity and the lowest sense of owning their essays. Preprint, not yet peer-reviewed.
-:::
-
-[Kosmyna et al., "Your Brain on ChatGPT," MIT Media Lab, 2025]{.eyebrow}
-
-## How much Excel?
-
-::: {style="font-size: 1.4em; margin-top: 0.6em; line-height: 1.45;"}
-- Sum, average, stdev, correl, ...
-- The value of Excel now is to check AI's answers.
-- Example: [tangency.kerryback.com](https://tangency.kerryback.com)
-:::
-
-## How much Python?
-
-::: {style="font-size: 1.4em; margin-top: 0.6em; line-height: 1.45;"}
-- Types, if-else, loops, functions, objects, methods, basic pandas and numpy, what's in what library.
-- Little need for Jupyter notebooks.
-- Work interactively with AI instead.
-:::
-
-# Critical thinking {.pillar-section background-image="images/zurich-fraumuenster.jpg" background-size="40.625% 100%" background-position="right"}
+# Critical thinking {.pillar-section}
 
 ```{=html}
 <svg viewBox="0 0 300 500" style="height:500px; display:block;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Critical thinking">
@@ -492,6 +416,163 @@ a method, an assumption, an interpretation, or a recommendation.
    at the end of your answer.
 ```
 
+# Strong fundamentals {.pillar-section}
+
+```{=html}
+<svg viewBox="0 0 300 500" style="height:500px; display:block;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strong fundamentals">
+<rect x="10" y="0" width="280" height="22" fill="#3AEFCC"/>
+<polygon points="10,22 290,22 262,46 38,46" fill="#3AEFCC"/>
+<rect x="40" y="46" width="220" height="382" fill="#E7E4E6"/>
+<line x1="75" y1="60" x2="75" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="75" y1="334" x2="75" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="105" y1="60" x2="105" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="105" y1="334" x2="105" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="135" y1="60" x2="135" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="135" y1="334" x2="135" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="165" y1="60" x2="165" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="165" y1="334" x2="165" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="195" y1="60" x2="195" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="195" y1="334" x2="195" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="225" y1="60" x2="225" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="225" y1="334" x2="225" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<text x="150" y="228" font-size="29" font-weight="700" fill="#36393B" text-anchor="middle">Strong</text>
+<text x="150" y="268" font-size="29" font-weight="700" fill="#36393B" text-anchor="middle">fundamentals</text>
+<rect x="20" y="428" width="260" height="22" fill="#3AEFCC"/>
+<rect x="0" y="454" width="300" height="26" fill="#3AEFCC"/>
+</svg>
+```
+
+## Teaching fundamentals now {.compare}
+
+:::: {.columns}
+::: {.column width="50%"}
+Writing the code or building the Excel model yourself may teach the concepts at a deeper level.
+:::
+
+::: {.column width="50%"}
+Or the concepts can be understood without the mechanics, and the mechanics are just distracting.
+:::
+::::
+
+::: {style="margin-top: 1.2em;"}
+- If we can go faster, we can go deeper. At what cost?
+- Assessment is difficult: completing out-of-class assignments is not a good signal of mastery.
+:::
+
+## Flipping the classroom
+
+::: {style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.5;"}
+- We have to expect out-of-class assignments will be done by AI.
+- Assessing in class by cold-calling remains viable.
+- This suggests flipping the classroom: providing lectures beforehand and spending class time interacting (case-style teaching).
+- Ask students to share screens and defend their work and assumptions.
+:::
+
+## A possible classroom protocol
+
+::: {.steps style="font-size: 1.3em; line-height: 1.5;"}
+1. Use AI to write cases.
+2. Give students 5 minutes to read.
+3. Discuss on whiteboard.
+4. Give students 10 minutes to do analysis with AI.
+5. Call on students to present and explain.
+:::
+
+## Writing essays with ChatGPT
+
+::: {.stats}
+::: {.stat}
+[83% vs 11%]{.stat-value}
+[could not quote a sentence from the essay they had just written: ChatGPT group vs the other two groups]{.stat-label}
+:::
+::: {.stat .fragment}
+[0 of 18]{.stat-value}
+[ChatGPT users quoted their own essay correctly]{.stat-label}
+:::
+:::
+
+::: {.note}
+54 participants wrote essays with ChatGPT, with a search engine, or with no tools, wearing EEG headsets. The ChatGPT group had the weakest brain connectivity and the lowest sense of owning their essays. Preprint, not yet peer-reviewed.
+:::
+
+[Kosmyna et al., "Your Brain on ChatGPT," MIT Media Lab, 2025]{.eyebrow}
+
+## High school students in Turkey {.shrink}
+
+About 1,000 high school students in Turkey. Each class session had two parts:
+
+1. Students solved practice problems. Each classroom was randomly given plain GPT-4, a GPT-4 tutor, or no AI.
+2. All students then took an exam with no AI.
+
+::: {.comparison-table .no-stripe style="font-size: 1.15em; margin-top: 0.5em;"}
+| Grades compared with the no-AI group | Practice problems | Exam | What students believed |
+|---|---|---|---|
+| Plain GPT-4 | +48% | −17% | They had not learned less |
+| GPT-4 tutor (hints, not answers) | +127% | No difference | They had done better on the exam |
+:::
+
+::: {.note}
+The tutor's prompt held the teacher's solution to each problem, common student mistakes with a hint for each, and an instruction not to give away the entire solution. Plain GPT-4 was told only to act as a tutor and help the student solve the problem.
+:::
+
+[Bastani et al., "Generative AI without guardrails can harm learning," PNAS, 2025]{.eyebrow}
+
+## Learning a new library with AI
+
+52 software engineers who knew Python but had never used Trio, a Python library for asynchronous programming.
+
+1. Each engineer coded two features with Trio. One group had an AI assistant. The other group coded by hand.
+2. All engineers then took a quiz on Trio with no AI.
+
+::: {.comparison-table style="font-size: 1.15em; margin-top: 0.5em;"}
+| | Minutes to finish the task | Quiz score |
+|---|---|---|
+| AI assistant | 23 | 50% |
+| By hand | 25 | 67% |
+:::
+
+The time difference is not significant. In the AI group, engineers who asked the AI for explanations scored 65–86%. Engineers who had the AI write or debug the code scored [24–39%]{style="white-space:nowrap"}.
+
+[Shen and Tamkin, "How AI impacts skill formation," Anthropic, January 2026]{.eyebrow}
+
+## Harvard study on AI tutors
+
+::: {style="font-size: 1.3em; margin-top: 0.4em;"}
+2× median learning gain, AI tutor vs active-learning class
+:::
+
+::: {.note}
+194 students in Harvard introductory physics. Each student learned one topic from the GPT-4 tutor at home and another in class. The tutor was prompted with the instructor's step-by-step solutions and guided students through each part of each problem.
+:::
+
+[Kestin et al., "AI tutoring outperforms in-class active learning," Scientific Reports, 2025]{.eyebrow}
+
+## Some AI instructional tools
+
+My plugin marketplace: [github.com/kerryback/kerryback-public](https://github.com/kerryback/kerryback-public)
+
+::: {.cards .cards-2}
+::: {.card}
+[Narrated slides builder]{.card-title}
+
+- Upload a PDF deck.
+- Write narration with AI.
+- Voice by ElevenLabs.
+
+Example: [zurich.kerryback.com/claude.mp4](https://zurich.kerryback.com/claude.mp4)
+:::
+
+::: {.card .card-blue}
+[Tutor builder]{.card-title}
+
+- Upload materials.
+- Write instructions to AI.
+- Write module intro narration and Python scripts, and configure plots, with AI.
+
+Examples: [tutors.kerryback.com](https://tutors.kerryback.com)
+:::
+:::
+
 ## Using and checking AI {.divider}
 
 ## Prompting
@@ -575,7 +656,39 @@ Most AI coding errors arise from misunderstandings and unstated assumptions.
 - Ask students to identify the errors.
 :::
 
-## Software {.divider background-image="images/zurich-3.jpg" background-size="40.625% 100%" background-position="right"}
+## Building AI processes {.divider}
+
+HTML pages and workbooks
+
+## New student deliverables
+
+::: {style="font-size: 1.4em; margin-top: 0.6em; line-height: 1.45;"}
+- Software apps: every course
+- Skills: every course
+- Custom agents: AI course
+:::
+
+## Tangency Portfolio: App
+
+![](images/tangency-page.png){height=430 fig-align="center"}
+
+[[tangency.kerryback.com](https://tangency.kerryback.com). SPY, TLT, and GLD, December 2004 to September 2026. The page also gives the weights and a workbook to download. The app could be a skill or a custom agent.]{.eyebrow}
+
+## Tangency Portfolio: Workbook
+
+::: {.steps style="font-size: 1.1em; line-height: 1.4;"}
+1. Means
+2. Standard deviations
+3. Correlations
+4. Covariance matrix
+5. Inverse covariance matrix
+6. Inverse covariance matrix times risk premia
+7. Scaled to the tangency portfolio
+:::
+
+[[Open the workbook](https://zurich.kerryback.com/files/tangency.xlsx). SPY, TLT, and GLD, December 2004 to September 2026.]{.eyebrow}
+
+## Software {.divider}
 
 ## Sandboxed agents
 
@@ -606,202 +719,3 @@ Most AI coding errors arise from misunderstandings and unstated assumptions.
 - Claude Code extension for VS Code
 - Academic Studio, my fork of VS Code that integrates Claude for non-coders: [academic-studio.com](https://academic-studio.com)
 :::
-
-## Building AI processes {.divider background-image="images/zurich-5.jpg" background-size="40.625% 100%" background-position="right"}
-
-HTML pages and workbooks
-
-## New student deliverables
-
-::: {style="font-size: 1.4em; margin-top: 0.6em; line-height: 1.45;"}
-- Software apps: every course
-- Skills: every course
-- Custom agents: AI course
-:::
-
-## Tangency Portfolio: App
-
-![](images/tangency-page.png){height=430 fig-align="center"}
-
-[[tangency.kerryback.com](https://tangency.kerryback.com). SPY, TLT, and GLD, December 2004 to September 2026. The page also gives the weights and a workbook to download.]{.eyebrow}
-
-## Tangency Portfolio: Workbook
-
-::: {.steps style="font-size: 1.1em; line-height: 1.4;"}
-1. Means
-2. Standard deviations
-3. Correlations
-4. Covariance matrix
-5. Inverse covariance matrix
-6. Inverse covariance matrix times risk premia
-7. Scaled to the tangency portfolio
-:::
-
-[[Open the workbook](http://zurich.kerryback.com/files/tangency.xlsx). SPY, TLT, and GLD, December 2004 to September 2026.]{.eyebrow}
-
-# Strong fundamentals {.pillar-section background-image="images/zurich-eth.jpg" background-size="40.625% 100%" background-position="right"}
-
-```{=html}
-<svg viewBox="0 0 300 500" style="height:500px; display:block;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strong fundamentals">
-<rect x="10" y="0" width="280" height="22" fill="#3AEFCC"/>
-<polygon points="10,22 290,22 262,46 38,46" fill="#3AEFCC"/>
-<rect x="40" y="46" width="220" height="382" fill="#E7E4E6"/>
-<line x1="75" y1="60" x2="75" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
-<line x1="75" y1="334" x2="75" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
-<line x1="105" y1="60" x2="105" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
-<line x1="105" y1="334" x2="105" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
-<line x1="135" y1="60" x2="135" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
-<line x1="135" y1="334" x2="135" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
-<line x1="165" y1="60" x2="165" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
-<line x1="165" y1="334" x2="165" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
-<line x1="195" y1="60" x2="195" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
-<line x1="195" y1="334" x2="195" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
-<line x1="225" y1="60" x2="225" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
-<line x1="225" y1="334" x2="225" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
-<text x="150" y="228" font-size="29" font-weight="700" fill="#36393B" text-anchor="middle">Strong</text>
-<text x="150" y="268" font-size="29" font-weight="700" fill="#36393B" text-anchor="middle">fundamentals</text>
-<rect x="20" y="428" width="260" height="22" fill="#3AEFCC"/>
-<rect x="0" y="454" width="300" height="26" fill="#3AEFCC"/>
-</svg>
-```
-
-## Flipping the classroom
-
-::: {style="font-size: 1.6em; margin-top: 0.6em; line-height: 1.5;"}
-- We have to expect out-of-class assignments will be done by AI.
-- Assessing in class by cold-calling remains viable.
-- This suggests flipping the classroom: providing lectures beforehand and spending class time interacting (case-style teaching).
-- Ask students to share screens and defend their work and assumptions.
-:::
-
-## Mini cases
-
-::: {.steps style="font-size: 1.3em; line-height: 1.5;"}
-1. Use AI to write cases.
-2. Give students 5 minutes to read.
-3. Discuss on whiteboard.
-4. Give students 10 minutes to do analysis with AI.
-5. Call on students to present and explain.
-:::
-
-## AI tutors
-
-::: {style="font-size: 1.6em; margin-top: 0.6em; line-height: 1.5;"}
-- AI is a great teaching tool.
-- We can add value by controlling what it emphasizes and how it explains things.
-- Customized AI tutors will replace textbooks.
-- Examples: [tutors.kerryback.com](https://tutors.kerryback.com)
-:::
-
-## AI tutor vs active-learning class
-
-::: {.stats}
-::: {.stat}
-[2×]{.stat-value}
-[median learning gain, AI tutor vs active-learning class]{.stat-label}
-:::
-::: {.stat .fragment}
-[49 vs 60]{.stat-value}
-[minutes on task]{.stat-label}
-:::
-:::
-
-::: {.note}
-194 students in Harvard introductory physics. Each student learned one topic from the GPT-4 tutor at home and another in class. The tutor was prompted with the instructor's step-by-step solutions and guided students through each part of each problem.
-:::
-
-[Kestin et al., "AI tutoring outperforms in-class active learning," Scientific Reports, 2025]{.eyebrow}
-
-## Trading  {.divider background-image="images/zurich-8.jpg" background-size="40.625% 100%" background-position="right"}
-
-Man Group, HRT, LOBERT, and Alpha Arena (Matt Robinson's AI Street)
-
-## Two ways funds use AI for trading
-
-::: {.cards .cards-2}
-::: {.card}
-[Frontier models as researchers]{.card-title}
-
-Claude, GPT, and Gemini propose ideas, write code, read filings, and run backtests. The signals are conventional.
-
-:::
-
-::: {.card .card-dark}
-[Models trained on market data]{.card-title}
-
-A transformer is trained on order-book events instead of text.
-
-
-:::
-:::
-
-
-
-## Man Group: AlphaGPT
-
-::: {.step-flow-3}
-::: {.step-card}
-[Idea generator]{.step-title}
-[Proposes hypotheses at scale]{.step-desc}
-:::
-::: {.step-card}
-[Code implementer]{.step-title}
-[Writes Python against Man's research stack and runs the backtest]{.step-desc}
-:::
-::: {.step-card}
-[Evaluator]{.step-title}
-[Checks significance, risk, and economic sense]{.step-desc}
-:::
-:::
-
-- Output then goes to the same human review and investment committee as human research.
-- Built on frontier models. Man does not train its own model.
-- Problems: hallucination, look-ahead bias, multiple testing, token costs.
-
-[Man Numeric (Man Group, $214B); AI Street, November 20 and December 18, 2025]{.eyebrow}
-
-## Hudson River Trading
-
-::: {.stats}
-::: {.stat}
-[100+ TB]{.stat-value}
-[of equities, futures, and crypto order data]{.stat-label}
-:::
-::: {.stat}
-[20+ yrs]{.stat-value}
-[of history, "trillions of tokens"]{.stat-label}
-:::
-::: {.stat}
-[~10%]{.stat-value}
-[of US equity trading volume]{.stat-label}
-:::
-:::
-
-Market events are mapped to vectors (like tokens are mapped in an LLM).  The model is trained to predict the next market event.  
-
-
-[Marc Khoury, HRT AI team, conference talk; AI Street, January 15, 2026]{.eyebrow}
-
-## LOBERT
-
-| Field | Values in the token |
-|---|---|
-| Side | buy, sell |
-| Message type | new order, edit, delete, execution, hidden order |
-| Price: ticks from the best opposing quote | 0, 1, 2, 3, 5, 10 |
-| Volume | 0, 50, 100, 200; exactly on the level or between |
-
-- Example token: new sell order, 3 ticks away, volume 100, exact. The training data produces 293 distinct tokens.
-- The exact price distance, exact volume, and time since the previous message enter as continuous values beside the token.
-- The model predicts the next token as a classification over the 293 tokens, and the exact values with three regression heads.
-- Trained on 470 million Nasdaq messages (AAPL, INTC, MSFT, FB; May to September 2015) with 1.1 million parameters. The full next message is predicted correctly 27.8% of the time, against 6.1% for an earlier model.
-
-[Linna, Baltakys, Iosifidis, and Kanniainen, Tampere University, "LOBERT: Generative AI Foundation Model for Limit Order Book Messages," arXiv 2511.12563, 2026; AI Street, January 2, 2026]{.eyebrow}
-
-## Alpha Arena {.big-number}
-
-[6 of 32]{.stat-value}
-[model results finished with a profit. Eight models, including Claude, Gemini, ChatGPT, and Grok, traded US tech stocks with $10,000 each in four competitions. The combined portfolio lost about a third of its capital.]{.stat-label}
-
-[Nof1; Bloomberg; AI Street, May 7, 2026]{.eyebrow}
-

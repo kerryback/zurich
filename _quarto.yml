@@ -5,6 +5,7 @@ project:
   post-render: flatten.py
   resources:
     - index.html
+    - claude.mp4
     - files/**
     - pdf/**
     - CNAME

@@ -1830,6 +1830,99 @@ A name, a description and typed arguments (the three parts every tool has) writt
 :::
 ::::
 
+## Trading {.divider}
+
+Man Group, HRT, LOBERT, and Alpha Arena (Matt Robinson's AI Street)
+
+## Two ways funds use AI for trading
+
+::: {.cards .cards-2}
+::: {.card}
+[Frontier models as researchers]{.card-title}
+
+Claude, GPT, and Gemini propose ideas, write code, read filings, and run backtests. The signals are conventional.
+
+:::
+
+::: {.card .card-dark}
+[Models trained on market data]{.card-title}
+
+A transformer is trained on order-book events instead of text.
+
+
+:::
+:::
+
+
+
+## Man Group: AlphaGPT
+
+::: {.step-flow-3}
+::: {.step-card}
+[Idea generator]{.step-title}
+[Proposes hypotheses at scale]{.step-desc}
+:::
+::: {.step-card}
+[Code implementer]{.step-title}
+[Writes Python against Man's research stack and runs the backtest]{.step-desc}
+:::
+::: {.step-card}
+[Evaluator]{.step-title}
+[Checks significance, risk, and economic sense]{.step-desc}
+:::
+:::
+
+- Output then goes to the same human review and investment committee as human research.
+- Built on frontier models. Man does not train its own model.
+- Problems: hallucination, look-ahead bias, multiple testing, token costs.
+
+[Man Numeric (Man Group, $214B); AI Street, November 20 and December 18, 2025]{.eyebrow}
+
+## Hudson River Trading
+
+::: {.stats}
+::: {.stat}
+[100+ TB]{.stat-value}
+[of equities, futures, and crypto order data]{.stat-label}
+:::
+::: {.stat}
+[20+ yrs]{.stat-value}
+[of history, "trillions of tokens"]{.stat-label}
+:::
+::: {.stat}
+[~10%]{.stat-value}
+[of US equity trading volume]{.stat-label}
+:::
+:::
+
+Market events are mapped to vectors (like tokens are mapped in an LLM).  The model is trained to predict the next market event.  
+
+
+[Marc Khoury, HRT AI team, conference talk; AI Street, January 15, 2026]{.eyebrow}
+
+## LOBERT
+
+| Field | Values in the token |
+|---|---|
+| Side | buy, sell |
+| Message type | new order, edit, delete, execution, hidden order |
+| Price: ticks from the best opposing quote | 0, 1, 2, 3, 5, 10 |
+| Volume | 0, 50, 100, 200; exactly on the level or between |
+
+- Example token: new sell order, 3 ticks away, volume 100, exact. The training data produces 293 distinct tokens.
+- The exact price distance, exact volume, and time since the previous message enter as continuous values beside the token.
+- The model predicts the next token as a classification over the 293 tokens, and the exact values with three regression heads.
+- Trained on 470 million Nasdaq messages (AAPL, INTC, MSFT, FB; May to September 2015) with 1.1 million parameters. The full next message is predicted correctly 27.8% of the time, against 6.1% for an earlier model.
+
+[Linna, Baltakys, Iosifidis, and Kanniainen, Tampere University, "LOBERT: Generative AI Foundation Model for Limit Order Book Messages," arXiv 2511.12563, 2026; AI Street, January 2, 2026]{.eyebrow}
+
+## Alpha Arena {.big-number}
+
+[6 of 32]{.stat-value}
+[model results finished with a profit. Eight models, including Claude, Gemini, ChatGPT, and Grok, traded US tech stocks with $10,000 each in four competitions. The combined portfolio lost about a third of its capital.]{.stat-label}
+
+[Nof1; Bloomberg; AI Street, May 7, 2026]{.eyebrow}
+
 ## Multi-agent systems {.divider}
 
 [Agents]{.section-tag} Why split the work, and how agents talk to each other

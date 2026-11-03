@@ -3572,6 +3572,100 @@ async def add_two_numbers(args):
 </div>
 </div></div>
 </section>
+<section id="trading" class="slide level2 divider">
+<h2>Trading</h2>
+<p>Man Group, HRT, LOBERT, and Alpha Arena (Matt Robinson’s AI Street)</p>
+</section>
+<section id="two-ways-funds-use-ai-for-trading" class="slide level2">
+<h2>Two ways funds use AI for trading</h2>
+<div class="cards cards-2">
+<div class="card">
+<p><span class="card-title">Frontier models as researchers</span></p>
+<p>Claude, GPT, and Gemini propose ideas, write code, read filings, and run backtests. The signals are conventional.</p>
+</div>
+<div class="card card-dark">
+<p><span class="card-title">Models trained on market data</span></p>
+<p>A transformer is trained on order-book events instead of text.</p>
+</div>
+</div>
+</section>
+<section id="man-group-alphagpt" class="slide level2">
+<h2>Man Group: AlphaGPT</h2>
+<div class="step-flow-3">
+<div class="step-card">
+<p><span class="step-title">Idea generator</span> <span class="step-desc">Proposes hypotheses at scale</span></p>
+</div>
+<div class="step-card">
+<p><span class="step-title">Code implementer</span> <span class="step-desc">Writes Python against Man’s research stack and runs the backtest</span></p>
+</div>
+<div class="step-card">
+<p><span class="step-title">Evaluator</span> <span class="step-desc">Checks significance, risk, and economic sense</span></p>
+</div>
+</div>
+<ul>
+<li>Output then goes to the same human review and investment committee as human research.</li>
+<li>Built on frontier models. Man does not train its own model.</li>
+<li>Problems: hallucination, look-ahead bias, multiple testing, token costs.</li>
+</ul>
+<p><span class="eyebrow">Man Numeric (Man Group, $214B); AI Street, November 20 and December 18, 2025</span></p>
+</section>
+<section id="hudson-river-trading" class="slide level2">
+<h2>Hudson River Trading</h2>
+<div class="stats">
+<div class="stat">
+<p><span class="stat-value">100+ TB</span> <span class="stat-label">of equities, futures, and crypto order data</span></p>
+</div>
+<div class="stat">
+<p><span class="stat-value">20+ yrs</span> <span class="stat-label">of history, “trillions of tokens”</span></p>
+</div>
+<div class="stat">
+<p><span class="stat-value">~10%</span> <span class="stat-label">of US equity trading volume</span></p>
+</div>
+</div>
+<p>Market events are mapped to vectors (like tokens are mapped in an LLM). The model is trained to predict the next market event.</p>
+<p><span class="eyebrow">Marc Khoury, HRT AI team, conference talk; AI Street, January 15, 2026</span></p>
+</section>
+<section id="lobert" class="slide level2">
+<h2>LOBERT</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Values in the token</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Side</td>
+<td>buy, sell</td>
+</tr>
+<tr class="even">
+<td>Message type</td>
+<td>new order, edit, delete, execution, hidden order</td>
+</tr>
+<tr class="odd">
+<td>Price: ticks from the best opposing quote</td>
+<td>0, 1, 2, 3, 5, 10</td>
+</tr>
+<tr class="even">
+<td>Volume</td>
+<td>0, 50, 100, 200; exactly on the level or between</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Example token: new sell order, 3 ticks away, volume 100, exact. The training data produces 293 distinct tokens.</li>
+<li>The exact price distance, exact volume, and time since the previous message enter as continuous values beside the token.</li>
+<li>The model predicts the next token as a classification over the 293 tokens, and the exact values with three regression heads.</li>
+<li>Trained on 470 million Nasdaq messages (AAPL, INTC, MSFT, FB; May to September 2015) with 1.1 million parameters. The full next message is predicted correctly 27.8% of the time, against 6.1% for an earlier model.</li>
+</ul>
+<p><span class="eyebrow">Linna, Baltakys, Iosifidis, and Kanniainen, Tampere University, “LOBERT: Generative AI Foundation Model for Limit Order Book Messages,” arXiv 2511.12563, 2026; AI Street, January 2, 2026</span></p>
+</section>
+<section id="alpha-arena" class="slide level2 big-number">
+<h2>Alpha Arena</h2>
+<p><span class="stat-value">6 of 32</span> <span class="stat-label">model results finished with a profit. Eight models, including Claude, Gemini, ChatGPT, and Grok, traded US tech stocks with $10,000 each in four competitions. The combined portfolio lost about a third of its capital.</span></p>
+<p><span class="eyebrow">Nof1; Bloomberg; AI Street, May 7, 2026</span></p>
+</section>
 <section id="multi-agent-systems" class="slide level2 divider">
 <h2>Multi-agent systems</h2>
 <p><span class="section-tag">Agents</span> Why split the work, and how agents talk to each other</p>
