@@ -45,7 +45,7 @@ format:
 | "proactive about using AI where possible" | [RA Capital, junior associate, Boston](https://job-boards.greenhouse.io/racapitalmanagementllc/jobs/5216500008) | About 2 yrs |
 | "AI-forward people" | [RA Capital, healthcare associate, Boston](https://job-boards.greenhouse.io/racapitalmanagementllc/jobs/4565087008) | 2-5 yrs; PhD or MD |
 | "AI tools to systematize workflows and models" | [Ares, analyst, New York](https://aresmgmt.wd1.myworkdayjobs.com/en-US/External/job/New-York-NY/Analyst--Multi-Asset-Portfolio-Solutions--MAPS-_R8239) | 1-3 yrs |
-| "Translate complex investment problems into structured AI workflows" | [T. Rowe Price, investment AI analyst](https://troweprice.wd5.myworkdayjobs.com/en-US/TRowePrice/details/Investment-AI-Solutions-Analyst_81557) | 5+ or 10+ yrs |
+| "Translate complex investment problems into structured AI workflows" | [T. Rowe Price, investment AI analyst, Baltimore and London](https://troweprice.wd5.myworkdayjobs.com/en-US/TRowePrice/details/Investment-AI-Solutions-Analyst_81557) | 5+ or 10+ yrs |
 : {tbl-colwidths="[46,38,16]"}
 
 [Job postings, checked October 31, 2026]{.eyebrow}
@@ -70,16 +70,18 @@ format:
 |---|---|---|
 | "limitations, confidence levels, and interpretation risk" | [Wellington, data science analyst, Boston](https://wellington.wd5.myworkdayjobs.com/External/job/Boston-MA-United-States/Data-Science-Analyst--Equity-Research--Healthcare-Team_R94455-2) | 3-5+ yrs |
 | "how these tools have evolved and where they break down" | [Two Sigma, AI solutions developer, New York](https://careers.twosigma.com/careers/JobDetail/New-York-New-York-United-States-AI-Solutions-Developer/14102) | 1+ yrs; 5-10 preferred |
-| "robust guardrails, compliance checks, and observability frameworks" | [T. Rowe Price, investment AI analyst](https://troweprice.wd5.myworkdayjobs.com/en-US/TRowePrice/details/Investment-AI-Solutions-Analyst_81557) | 5+ or 10+ yrs |
+| "robust guardrails, compliance checks, and observability frameworks" | [T. Rowe Price, investment AI analyst, Baltimore and London](https://troweprice.wd5.myworkdayjobs.com/en-US/TRowePrice/details/Investment-AI-Solutions-Analyst_81557) | 5+ or 10+ yrs |
 | "evaluation, monitoring, and human-in-the-loop patterns" | [Carlyle, AlpInvest engineer, New York](https://carlyle.wd1.myworkdayjobs.com/en-US/Carlyle/details/AlpInvest-Embedded-Data-Scientist_R-00227) | 8+ yrs |
 | "appropriate audit trails" | [Schonfeld, AI strategy analyst, London](https://job-boards.greenhouse.io/schonfeld/jobs/8031499) | 3-5 yrs |
 : {tbl-colwidths="[46,38,16]"}
 
 [Job postings, checked October 31, 2026]{.eyebrow}
 
-## {.no-title}
+## Survey of finance recruiters
 
-![](images/selby-jennings-ai-fluency-gap.png){height=520 fig-align="center"}
+Percent of finance HR professionals who said each factor will be more important, or less important, when evaluating candidates in their organization's next hiring cycle.
+
+![](images/selby-jennings-ai-fluency-gap-chart.png){height=370 fig-align="center"}
 
 [[Selby Jennings: The AI Fluency Gap](https://www.selbyjennings.com/insights/ai-talent-pulse-report/). Research conducted by Censuswide, sample of 500 US HR Professionals in the finance industry in August, 2026.]{.eyebrow}
 
@@ -104,8 +106,8 @@ format:
 <line x1="305" y1="376" x2="305" y2="436" stroke="#c9c5c8" stroke-width="5" stroke-linecap="round"/>
 <line x1="335" y1="182" x2="335" y2="242" stroke="#c9c5c8" stroke-width="5" stroke-linecap="round"/>
 <line x1="335" y1="376" x2="335" y2="436" stroke="#c9c5c8" stroke-width="5" stroke-linecap="round"/>
-<text x="260" y="300" font-size="30" font-weight="700" fill="#36393B" text-anchor="middle">Strong</text>
-<text x="260" y="338" font-size="30" font-weight="700" fill="#36393B" text-anchor="middle">fundamentals</text>
+<text x="260" y="300" font-size="30" font-weight="700" fill="#36393B" text-anchor="middle">Critical</text>
+<text x="260" y="338" font-size="30" font-weight="700" fill="#36393B" text-anchor="middle">thinking</text>
 <rect x="142" y="446" width="236" height="16" fill="#36393B"/>
 <rect x="422" y="136" width="236" height="16" fill="#36393B"/>
 <polygon points="422,152 658,152 640,172 440,172" fill="#36393B"/>
@@ -122,8 +124,8 @@ format:
 <line x1="585" y1="376" x2="585" y2="436" stroke="#c9c5c8" stroke-width="5" stroke-linecap="round"/>
 <line x1="615" y1="182" x2="615" y2="242" stroke="#c9c5c8" stroke-width="5" stroke-linecap="round"/>
 <line x1="615" y1="376" x2="615" y2="436" stroke="#c9c5c8" stroke-width="5" stroke-linecap="round"/>
-<text x="540" y="300" font-size="30" font-weight="700" fill="#36393B" text-anchor="middle">Critical</text>
-<text x="540" y="338" font-size="30" font-weight="700" fill="#36393B" text-anchor="middle">thinking</text>
+<text x="540" y="300" font-size="30" font-weight="700" fill="#36393B" text-anchor="middle">Strong</text>
+<text x="540" y="338" font-size="30" font-weight="700" fill="#36393B" text-anchor="middle">fundamentals</text>
 <rect x="422" y="446" width="236" height="16" fill="#36393B"/>
 <rect x="702" y="136" width="236" height="16" fill="#36393B"/>
 <polygon points="702,152 938,152 920,172 720,172" fill="#36393B"/>
@@ -152,17 +154,17 @@ format:
 
 ```{=html}
 <div style="display:flex; justify-content:center; align-items:center; margin-top:0.5em;">
-<div class="fragment" style="width:430px; height:430px; border-radius:50%; background:#3AEFCC; display:flex; align-items:center; justify-content:center; text-align:center; box-sizing:border-box; padding:0 70px; font-size:34px; font-weight:700; line-height:1.3; color:#36393B;">Building robust AI processes</div>
-<div class="fragment" style="width:430px; height:430px; border-radius:50%; background:#E7E4E6; margin-left:-70px; display:flex; align-items:center; justify-content:center; text-align:center; box-sizing:border-box; padding:0 70px; font-size:34px; font-weight:700; line-height:1.3; color:#36393B;">Evaluating AI processes and output</div>
+<div class="fragment" style="width:430px; height:430px; border-radius:50%; background:#3AEFCC; display:flex; align-items:center; justify-content:center; text-align:center; box-sizing:border-box; padding:0 70px; font-size:34px; font-weight:700; line-height:1.3; color:#36393B;">Evaluating AI processes and output</div>
+<div class="fragment" style="width:430px; height:430px; border-radius:50%; background:#E7E4E6; margin-left:-70px; display:flex; align-items:center; justify-content:center; text-align:center; box-sizing:border-box; padding:0 70px; font-size:34px; font-weight:700; line-height:1.3; color:#36393B;">Building robust AI processes</div>
 </div>
 ```
 
 ## Issues
 
 ::: {.steps style="font-size: 1.15em; line-height: 1.45;"}
-1. How to teach fundamentals now?<br>How much Excel? How much Python?
-2. How to teach critical thinking now?<br>How to use AI and how to prevent reliance on AI?
-3. How to incorporate building AI processes in finance coursework?
+1. How to teach critical thinking now?<br>How to use AI and how to prevent reliance on AI?
+2. How to teach fundamentals now?<br>Build the model by hand, or have AI build it and check it?
+3. How to teach building AI processes and evaluating their output?
 :::
 
 ## From makers to checkers {.title-left}
@@ -231,16 +233,17 @@ With Claude Opus 4.5 and GPT-5.2-Codex, [~80%]{.accent style="font-weight: 700;"
 
 Terminal-Bench 4.0: percent of 66 long terminal tasks solved. Vals.ai runs every model in the same harness.
 
-::: {.comparison-table}
+::: {.comparison-table style="font-size: 0.9em;"}
 
 | Model | Score | | Model | Score |
 |---|---|---|---|---|
-| Claude Opus 5.5 | 65% | | Muse Wonder Full | 58% |
+| Claude Opus 5.5 | 65% | | Gemini 4 Argon | 58% |
 | Claude Sonnet 5.5 | 64% | | GPT-6.1 Sol | 55% |
 | Kimi K3.1 Pro | 64% | | GLM-5.3 (open) | 39% |
 | Gemini 4 Carbon | 63% | | Qwen3.8 Max | 39% |
 | GPT-6 Astra | 60% | | DeepSeek V4.1 Flash (open) | 32% |
 | Claude Fable 5.1 | 58% | | Grok 4.7 | 29% |
+| Muse Wonder Full | 58% | | | |
 
 :::
 
@@ -368,6 +371,7 @@ Herdağdelen, Joren and Tamkin (2026), "Who's Aligned to Whom? How AI Agents Sha
 - The agent's lean on the final recommendation moved it 17% of the way from discontinue to roll out (one-sided p = 0.07).
 - Participants who took a side and then heard the agent lean the other way switched 60% of the time.
 - More than half rated the recommendation as more their own than the agent's.
+- Without the agent, 6 of 11 analysts made errors that invalidated their results, against 3 of 50 with it. The 11 chose not to use the agent, so this comparison is not randomized.
 :::
 
 ::: {.footnote}
@@ -409,9 +413,9 @@ a method, an assumption, an interpretation, or a recommendation.
 
 1. When you reach a judgment call, run each option and check
    whether the result changes.
-2. If the result changes, stop and name the judgment call.
-   Make the best case for each option, with equal effort.
-   Refuse to do more than that. Do not recommend a choice.
+2. If the result changes, flag the judgment call.
+   Make the strongest possible case for each option,
+   with equal effort.
 3. If the result does not change, list the judgment call
    at the end of your answer.
 ```
@@ -459,24 +463,7 @@ Or the concepts can be understood without the mechanics, and the mechanics are j
 - Assessment is difficult: completing out-of-class assignments is not a good signal of mastery.
 :::
 
-## Flipping the classroom
-
-::: {style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.5;"}
-- We have to expect out-of-class assignments will be done by AI.
-- Assessing in class by cold-calling remains viable.
-- This suggests flipping the classroom: providing lectures beforehand and spending class time interacting (case-style teaching).
-- Ask students to share screens and defend their work and assumptions.
-:::
-
-## A possible classroom protocol
-
-::: {.steps style="font-size: 1.3em; line-height: 1.5;"}
-1. Use AI to write cases.
-2. Give students 5 minutes to read.
-3. Discuss on whiteboard.
-4. Give students 10 minutes to do analysis with AI.
-5. Call on students to present and explain.
-:::
+## Evidence on learning with AI {.divider}
 
 ## Writing essays with ChatGPT
 
@@ -547,6 +534,31 @@ The time difference is not significant. In the AI group, engineers who asked the
 
 [Kestin et al., "AI tutoring outperforms in-class active learning," Scientific Reports, 2025]{.eyebrow}
 
+## Classroom design {.divider}
+
+## Flipping the classroom
+
+::: {style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.5;"}
+- We have to expect out-of-class assignments will be done by AI.
+- Assessing in class by cold-calling remains viable.
+- This suggests flipping the classroom: providing lectures beforehand and spending class time interacting (case-style teaching).
+- Ask students to share screens and defend their work and assumptions.
+:::
+
+## A possible classroom protocol
+
+::: {.steps style="font-size: 1.2em; line-height: 1.45;"}
+1. Use AI to write cases.
+2. Give students 5 minutes to read.
+3. Discuss on whiteboard.
+4. Give students 10 minutes to do analysis with AI.
+5. Call on students to present and explain.
+:::
+
+::: {.note}
+In the studies, AI that gave answers lowered learning. AI that tutored, with hints and step-by-step guidance, did not. In this protocol, the class discussion in steps 3 and 5 plays the tutor's role: the instructor questions students about the analysis they did with AI.
+:::
+
 ## Some AI instructional tools
 
 My plugin marketplace: [github.com/kerryback/kerryback-public](https://github.com/kerryback/kerryback-public)
@@ -572,6 +584,32 @@ Example: [zurich.kerryback.com/claude.mp4](https://zurich.kerryback.com/claude.m
 Examples: [tutors.kerryback.com](https://tutors.kerryback.com)
 :::
 :::
+
+# AI expertise {.pillar-section}
+
+```{=html}
+<svg viewBox="0 0 300 500" style="height:500px; display:block;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI expertise">
+<rect x="10" y="0" width="280" height="22" fill="#3AEFCC"/>
+<polygon points="10,22 290,22 262,46 38,46" fill="#3AEFCC"/>
+<rect x="40" y="46" width="220" height="382" fill="#E7E4E6"/>
+<line x1="75" y1="60" x2="75" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="75" y1="334" x2="75" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="105" y1="60" x2="105" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="105" y1="334" x2="105" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="135" y1="60" x2="135" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="135" y1="334" x2="135" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="165" y1="60" x2="165" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="165" y1="334" x2="165" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="195" y1="60" x2="195" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="195" y1="334" x2="195" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="225" y1="60" x2="225" y2="140" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<line x1="225" y1="334" x2="225" y2="414" stroke="#c9c5c8" stroke-width="6" stroke-linecap="round"/>
+<text x="150" y="228" font-size="29" font-weight="700" fill="#36393B" text-anchor="middle">AI</text>
+<text x="150" y="268" font-size="29" font-weight="700" fill="#36393B" text-anchor="middle">expertise</text>
+<rect x="20" y="428" width="260" height="22" fill="#3AEFCC"/>
+<rect x="0" y="454" width="300" height="26" fill="#3AEFCC"/>
+</svg>
+```
 
 ## Using and checking AI {.divider}
 
@@ -663,8 +701,8 @@ HTML pages and workbooks
 ## New student deliverables
 
 ::: {style="font-size: 1.4em; margin-top: 0.6em; line-height: 1.45;"}
-- Software apps: every course
-- Skills: every course
+- Software apps: every course?
+- Skills: every course?
 - Custom agents: AI course
 :::
 
@@ -698,7 +736,7 @@ HTML pages and workbooks
 
 - Cowork (and Codex, ...) runs in a virtual machine or container.  The container has a whitelist of web addresses it can visit, including Anthropic, GitHub, Python, and a few others.
 - It can do web fetch and web search because they are run at Anthropic.  It only needs to reach Anthropic to run them.
-- You can edit the whitelist (allowlist) in Cowork (but not Codex, I think) but it is reported to be buggy.
+- You can edit the whitelist (allowlist) in Cowork.
 
 :::
 
