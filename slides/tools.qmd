@@ -347,11 +347,12 @@ Railway's trial gives $5 of usage for 30 days, with no credit card. After that, 
 ## Example
 
 ::: {style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.45;"}
-1. Create GitHub and Railway accounts.  Get GitHub and Railway access tokens (ask Claude). Give each token an expiry date, and keep it out of the repository.
+1. Create GitHub and Railway accounts.
 2. Ask Claude to install the GitHub and Railway CLIs.
-3. Ask Claude to rewrite the bond pricing app as a FastAPI app in a new Git repo.
-4. Ask Claude to push the repo to GitHub.
-5. Ask Claude to create and deploy a new Railway service connected to the GitHub repo.
+3. In a terminal, run `gh auth login` and `railway login`. Each opens your browser to sign in.
+4. Ask Claude to rewrite the bond pricing app as a FastAPI app in a new Git repo.
+5. Ask Claude to push the repo to GitHub.
+6. Ask Claude to create and deploy a new Railway service connected to the GitHub repo.
 :::
 
 [Needs: Claude Code, GitHub and Railway accounts, Python]{.eyebrow}
