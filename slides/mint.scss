@@ -1142,6 +1142,28 @@ $divider-inset: 56px;
   }
 }
 
+// Section slides (level-1 headings) carry no circle; only subsection
+// dividers ({.divider}) do.
+.reveal .slides > section.stack > section.level1:not(.divider)[data-background-image]::after {
+  content: none;
+}
+
+// Subsection dividers without a photograph: the circle sits in the
+// bottom-right corner, inside the strip, cut off by the slide edge.
+.reveal .slides > section.stack > section.divider:not([data-background-image]),
+.reveal .slides > section:not(.stack).divider:not([data-background-image]) {
+  &::after {
+    @include circle($divider-circle);
+    right: $strip + $divider-inset;
+    bottom: -$divider-circle * $divider-cut;
+  }
+
+  &.circle-top::after {
+    bottom: auto;
+    top: -$divider-circle * $divider-cut;
+  }
+}
+
 // On photo-right dividers the strip is on the left; the slide number follows.
 .reveal:has(.slides section.level1[data-background-image]:not(.photo-left).present) .slide-number,
 .reveal:has(.slides section.divider[data-background-image]:not(.photo-left).present) .slide-number {
@@ -1203,6 +1225,43 @@ $divider-inset: 56px;
 
 .reveal .progress {
   color: $mint;
+}
+
+// ── Section strip ───────────────────────────────────────────────────────
+// A thin band along the bottom with "Section / Subsection" and the page
+// number; section-strip.html (include-after-body) fills it in. It replaces
+// the number in the mint strip. It lives inside .slides, so it scales with
+// the canvas and lands on the slide in PDF exports.
+// Hidden on the title slide and on section and subsection title slides.
+
+.reveal .slide-number {
+  display: none !important;
+}
+
+.reveal .section-strip {
+  position: absolute;
+  left: 0;
+  right: $strip;           // stop at the mint strip
+  bottom: 0;
+  height: 26px;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px 0 $pad-left;
+  box-sizing: border-box;
+  background: $pale;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  color: $ink-muted;
+  font-family: $font-family-sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.reveal:has(#title-slide.present, section.level1.present, section.divider.present) .section-strip {
+  display: none;
 }
 
 .reveal .controls {

@@ -1,0 +1,49 @@
+<script>
+// Bottom strip: "Section / Subsection" on the left, "page/total" on the right.
+// Sections are level-1 headings; subsections are {.divider} slides. A new
+// section clears the subsection. Styled in mint.scss (.section-strip).
+(function () {
+  function label(s, sel) {
+    var h = s.querySelector(sel);
+    return h ? h.textContent.trim() : '';
+  }
+
+  function update() {
+    var strip = document.querySelector('.reveal .section-strip');
+    var cur = Reveal.getCurrentSlide();
+    var slides = document.querySelectorAll('.reveal .slides section:not(.stack)');
+    var sec = '', sub = '';
+    for (var i = 0; i < slides.length; i++) {
+      var s = slides[i];
+      if (s.classList.contains('level1') && !s.classList.contains('divider')) {
+        sec = label(s, 'h1');
+        sub = '';
+      } else if (s.classList.contains('divider')) {
+        sub = label(s, 'h1, h2');
+      }
+      if (s === cur) break;
+    }
+    var where = [sec, sub].filter(Boolean).join(' / ');
+    strip.querySelector('.where').textContent = where;
+    strip.querySelector('.page').textContent =
+      (Reveal.getSlidePastCount() + 1) + '/' + Reveal.getTotalSlides();
+  }
+
+  function init() {
+    var strip = document.createElement('div');
+    strip.className = 'section-strip';
+    strip.innerHTML = '<span class="where"></span><span class="page"></span>';
+    // Insert first, not last: reveal's isLastSlide() tests the current
+    // slide's nextElementSibling, so a trailing strip would make the last
+    // slide look like it has a successor (and Decktape loops forever).
+    var slides = document.querySelector('.reveal .slides');
+    slides.insertBefore(strip, slides.firstChild);
+    Reveal.on('slidechanged', update);
+    update();
+  }
+
+  window.addEventListener('load', function () {
+    if (Reveal.isReady()) init(); else Reveal.on('ready', init);
+  });
+})();
+</script>

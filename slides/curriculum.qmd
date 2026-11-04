@@ -1,6 +1,5 @@
 ---
 title: "The finance curriculum<br>in the age of AI"
-subtitle: "Session 1"
 author: "Kerry Back, Rice University"
 institute: "Department of Finance, University of Zurich"
 date: "2026-11-04"
@@ -23,6 +22,7 @@ format:
     highlight-style: github
     html-math-method: mathjax
     embed-resources: true
+    include-after-body: section-strip.html
     include-in-header:
       text: |
         <style>
@@ -30,11 +30,19 @@ format:
         .reveal .slides > section#title-slide[data-background-position="top"] h1.title { font-size: 1.15em; margin-bottom: 0.4em; line-height: 1.3; }
         .reveal .slides > section.stack > section.level1.pillar-section { justify-content: center !important; align-items: center; }
         .reveal .slides > section.stack > section.level1.pillar-section h1 { display: none; }
-        .reveal .slides > section.stack > section.level1.pillar-section::after { content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%; background: #3AEFCC; pointer-events: none; top: -88px; right: 96px; }
-        .reveal .slides > section.stack > section.level1.pillar-section[data-background-image]::after { right: 576px; }
+        .reveal .slides > section.stack > section.divider:not([data-background-image])::after, .reveal .slides > section:not(.stack).divider:not([data-background-image])::after { content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%; background: #3AEFCC; pointer-events: none; top: -88px; right: 96px; }
         .reveal .no-stripe table tbody tr:nth-child(odd) { background: transparent; }
         </style>
 ---
+
+## Outline
+
+::: {style="font-size: 1.4em; margin-top: 0.6em; line-height: 1.6;"}
+1. Critical thinking
+2. Strong fundamentals
+3. AI expertise
+:::
+
 
 ## Job postings: using AI
 
@@ -229,7 +237,7 @@ With Claude Opus 4.5 and GPT-5.2-Codex, [~80%]{.accent style="font-weight: 700;"
 
 [Tal Fishman, head of fixed income quant research, Lord Abbett ($248B); AI Street, March 3, 2026]{.eyebrow}
 
-## Current benchmark scores
+## Current benchmark scores {.shrink}
 
 Terminal-Bench 4.0: percent of 66 long terminal tasks solved. Vals.ai runs every model in the same harness.
 

@@ -40,7 +40,7 @@ page either side. Match the deck's own aspect ratio instead:
 The multiple (1.5x) only sets the raster resolution; the aspect ratio is what has
 to match. A deck built on another canvas gets a second row here.
 
-Name a deck by its number or in full: `/deck 1` or `/deck 1_curriculum`. Omit `$1` to export every deck
+Name a deck by its filename: `/deck curriculum` or `/deck tools`. Omit `$1` to export every deck
 that is currently rendered under `docs/`. If the name matches nothing the script
 lists what it found; relay that list. Report where the PDF landed and its page
 count.
