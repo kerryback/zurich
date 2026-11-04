@@ -1400,7 +1400,7 @@ Kerry Back, Rice University
 <th>Parameters (total / per token)</th>
 <th>Size as released</th>
 <th>Run at</th>
-<th>Tokens/sec</th>
+<th>Tokens/sec: limit</th>
 <th>Terminal-Bench 2.1 (developer)</th>
 <th>Terminal-Bench 2.1 (Vals.ai)</th>
 <th>DeepSWE</th>
@@ -1413,7 +1413,7 @@ Kerry Back, Rice University
 <td>1.02T / 42B</td>
 <td>566 GB (4-bit)</td>
 <td>as released</td>
-<td>~90</td>
+<td>50</td>
 <td>89.9</td>
 <td>—</td>
 <td>71.9</td>
@@ -1424,7 +1424,7 @@ Kerry Back, Rice University
 <td>2.8T / ~104B</td>
 <td>1.56 TB (4-bit)</td>
 <td>as released</td>
-<td>~35</td>
+<td>21</td>
 <td>88.3</td>
 <td>80.9</td>
 <td>67.3</td>
@@ -1435,7 +1435,7 @@ Kerry Back, Rice University
 <td>753B / 40B</td>
 <td>1.5 TB (16-bit)</td>
 <td>0.75 TB (8-bit)</td>
-<td>~50</td>
+<td>30</td>
 <td>88.2</td>
 <td>—</td>
 <td>—</td>
@@ -1446,7 +1446,7 @@ Kerry Back, Rice University
 <td>2.4T / 95B</td>
 <td>4.9 TB (16-bit)</td>
 <td>1.35 TB (4-bit)</td>
-<td>~40</td>
+<td>22</td>
 <td>86.6</td>
 <td>—</td>
 <td>56.6</td>
@@ -1457,7 +1457,7 @@ Kerry Back, Rice University
 <td>1.6T / 49B</td>
 <td>893 GB</td>
 <td>as released</td>
-<td>~75</td>
+<td>44</td>
 <td>—</td>
 <td>—</td>
 <td>—</td>
@@ -1468,7 +1468,7 @@ Kerry Back, Rice University
 <td>1T / 32B</td>
 <td>0.6 TB (4-bit)</td>
 <td>as released</td>
-<td>~100</td>
+<td>62</td>
 <td>—</td>
 <td>—</td>
 <td>—</td>
@@ -1479,7 +1479,7 @@ Kerry Back, Rice University
 <td>1.05T / 52B</td>
 <td>1.1 TB (8-bit)</td>
 <td>as released</td>
-<td>~40</td>
+<td>22</td>
 <td>—</td>
 <td>—</td>
 <td>61.7</td>
@@ -1533,7 +1533,7 @@ Kerry Back, Rice University
 </table>
 </div>
 <div class="note" style="font-size:0.8em">
-<p>Tokens/sec: one user, estimated from memory bandwidth, not measured. Scores (percent of tasks solved) depend on the harness as well as the model: developers test in their own harness (Kimi K3 in Moonshot’s Kimi Code); Vals.ai tests every model in one harness. DeepSWE and SWE-bench are developer-reported.</p>
+<p>Tokens/sec limit (one user): 1.2 TB/s divided by the bytes of active weights read per token. Measured speeds are lower: four linked M3 Ultra Mac Studios (819 GB/s) ran Kimi K2 Thinking at about 30 tokens/sec, 70% of its limit (Geerling, Dec. 2025). Scores depend on the harness as well as the model: developers test in their own (Kimi K3 in Kimi Code); Vals.ai uses one for all models. DeepSWE and SWE-bench are developer-reported.</p>
 </div>
 </section></section>
 <section>

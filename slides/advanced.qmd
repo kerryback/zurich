@@ -297,15 +297,15 @@ Four linked 512 GB Mac Studios (2 TB in total, about \$89,000) run 1-trillion-pa
 
 ::: {.comparison-table style="font-size:0.85em"}
 
-| Model | Parameters (total / per token) | Size as released | Run at | Tokens/sec | Terminal-Bench 2.1 (developer) | Terminal-Bench 2.1 (Vals.ai) | DeepSWE | SWE-bench Verified |
+| Model | Parameters (total / per token) | Size as released | Run at | Tokens/sec: limit | Terminal-Bench 2.1 (developer) | Terminal-Bench 2.1 (Vals.ai) | DeepSWE | SWE-bench Verified |
 |----------------------|--------------|-------------|-------------|------|--------|--------|-------|--------|
-| Xiaomi MiMo-V2.6-Pro | 1.02T / 42B | 566 GB (4-bit) | as released | ~90 | 89.9 | --- | 71.9 | --- |
-| Moonshot Kimi K3 | 2.8T / ~104B | 1.56 TB (4-bit) | as released | ~35 | 88.3 | 80.9 | 67.3 | --- |
-| Z.ai GLM-5.3 | 753B / 40B | 1.5 TB (16-bit) | 0.75 TB (8-bit) | ~50 | 88.2 | --- | --- | --- |
-| Alibaba Qwen3.8-2.4T | 2.4T / 95B | 4.9 TB (16-bit) | 1.35 TB (4-bit) | ~40 | 86.6 | --- | 56.6 | --- |
-| DeepSeek V4-Pro | 1.6T / 49B | 893 GB | as released | ~75 | --- | --- | --- | 80.6 |
-| Moonshot Kimi K2.6 | 1T / 32B | 0.6 TB (4-bit) | as released | ~100 | --- | --- | --- | 80.2 |
-| Mistral Large 4 | 1.05T / 52B | 1.1 TB (8-bit) | as released | ~40 | --- | --- | 61.7 | --- |
+| Xiaomi MiMo-V2.6-Pro | 1.02T / 42B | 566 GB (4-bit) | as released | 50 | 89.9 | --- | 71.9 | --- |
+| Moonshot Kimi K3 | 2.8T / ~104B | 1.56 TB (4-bit) | as released | 21 | 88.3 | 80.9 | 67.3 | --- |
+| Z.ai GLM-5.3 | 753B / 40B | 1.5 TB (16-bit) | 0.75 TB (8-bit) | 30 | 88.2 | --- | --- | --- |
+| Alibaba Qwen3.8-2.4T | 2.4T / 95B | 4.9 TB (16-bit) | 1.35 TB (4-bit) | 22 | 86.6 | --- | 56.6 | --- |
+| DeepSeek V4-Pro | 1.6T / 49B | 893 GB | as released | 44 | --- | --- | --- | 80.6 |
+| Moonshot Kimi K2.6 | 1T / 32B | 0.6 TB (4-bit) | as released | 62 | --- | --- | --- | 80.2 |
+| Mistral Large 4 | 1.05T / 52B | 1.1 TB (8-bit) | as released | 22 | --- | --- | 61.7 | --- |
 | Claude Sonnet 4.6 (Feb. 2026) | closed | | | | --- | 57.3 | --- | 79.6 |
 | Claude Sonnet 5.5 | closed | | | | --- | --- | 71.0 | --- |
 | Claude Fable 5.1 | closed | | | | --- | 85.0 | --- | --- |
@@ -314,7 +314,7 @@ Four linked 512 GB Mac Studios (2 TB in total, about \$89,000) run 1-trillion-pa
 :::
 
 ::: {.note style="font-size:0.8em"}
-Tokens/sec: one user, estimated from memory bandwidth, not measured. Scores (percent of tasks solved) depend on the harness as well as the model: developers test in their own harness (Kimi K3 in Moonshot's Kimi Code); Vals.ai tests every model in one harness. DeepSWE and SWE-bench are developer-reported.
+Tokens/sec limit (one user): 1.2 TB/s divided by the bytes of active weights read per token. Measured speeds are lower: four linked M3 Ultra Mac Studios (819 GB/s) ran Kimi K2 Thinking at about 30 tokens/sec, 70% of its limit (Geerling, Dec. 2025). Scores depend on the harness as well as the model: developers test in their own (Kimi K3 in Kimi Code); Vals.ai uses one for all models. DeepSWE and SWE-bench are developer-reported.
 :::
 
 # Fine-tuning {background-image="images/zurich-9.jpg" background-size="40.625% 100%" background-position="right"}
