@@ -239,7 +239,7 @@ With Claude Opus 4.5 and GPT-5.2-Codex, [~80%]{.accent style="font-weight: 700;"
 
 ## Current benchmark scores {.shrink}
 
-Terminal-Bench 4.0: percent of 66 long terminal tasks solved. Vals.ai runs every model in the same harness.
+Terminal-Bench 4.0: percent of 66 long terminal tasks solved. Vals.ai runs every model in the same harness: the program that sends messages to the model and runs the tools it asks for.
 
 ::: {.comparison-table style="font-size: 0.9em;"}
 
@@ -399,9 +399,9 @@ Williams-Ceci et al. (2026), "Biased AI Writing Assistants Shift Users' Attitude
 ## What does affect reliance on AI
 
 ::: {style="font-size: 0.8em;"}
-| What the LLM did | Study | Finding |
+| What the model did | Study | Finding |
 |---|---|---|
-| Stated uncertainty in the first person ("I'm not sure, but...") | Kim et al. (2024), 404 participants, medical questions | Agreed with the LLM less and answered more accurately |
+| Stated uncertainty in the first person ("I'm not sure, but...") | Kim et al. (2024), 404 participants, medical questions | Agreed with the model less and answered more accurately |
 | Cited sources | Kim et al. (2025), 308 participants | Relied less on incorrect answers |
 | Explained its answer | Kim et al. (2025), 308 participants | Relied more on both correct and incorrect answers |
 | Added a disclaimer, highlighted uncertain words, or implied the answer without stating it | Bo, Wan and Anderson (2025), 400 participants | Relied less on wrong answers, but also less on right ones |
@@ -573,19 +573,19 @@ My plugin marketplace: [github.com/kerryback/kerryback-public](https://github.co
 
 ::: {.cards .cards-2}
 ::: {.card}
-[Narrated slides builder]{.card-title}
+[Voiceover skill]{.card-title}
 
 - Upload a PDF deck.
 - Write narration with AI.
 - Voice by ElevenLabs.
 
-Example: [zurich.kerryback.com/claude.mp4](https://zurich.kerryback.com/claude.mp4)
+Example: [kerryback.github.io/zurich/claude.mp4](https://kerryback.github.io/zurich/claude.mp4)
 :::
 
 ::: {.card .card-blue}
-[Tutor builder]{.card-title}
+[Tutor skill]{.card-title}
 
-- Upload materials.
+- Point it at your slides, notebooks, or code.
 - Write instructions to AI.
 - Write module intro narration and Python scripts, and configure plots, with AI.
 
@@ -732,7 +732,7 @@ HTML pages and workbooks
 7. Scaled to the tangency portfolio
 :::
 
-[[Open the workbook](https://zurich.kerryback.com/files/tangency.xlsx). SPY, TLT, and GLD, December 2004 to September 2026.]{.eyebrow}
+[[Open the workbook](https://kerryback.github.io/zurich/files/tangency.xlsx). SPY, TLT, and GLD, December 2004 to September 2026.]{.eyebrow}
 
 ## Software {.divider}
 
@@ -760,7 +760,7 @@ HTML pages and workbooks
 ## Non-sandboxed versions of Claude
 
 ::: {style="font-size: 1.4em; margin-top: 0.6em; line-height: 1.45;"}
-- Code option in Claude Desktop
+- Code tab in the Claude desktop app
 - Claude Code CLI
 - Claude Code extension for VS Code
 - Academic Studio, my fork of VS Code that integrates Claude for non-coders: [academic-studio.com](https://academic-studio.com)

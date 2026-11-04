@@ -10,5 +10,4 @@ project:
     - claude.mp4
     - files/**
     - pdf/**
-    - CNAME
     - .nojekyll

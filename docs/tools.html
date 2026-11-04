@@ -1122,7 +1122,7 @@ Kerry Back, Rice University
 </tr>
 <tr class="odd">
 <td>Build a tutor</td>
-<td>Python 3.11 or later, an Anthropic API key; a Railway account to deploy it</td>
+<td>Python 3.11 or later, an Anthropic API key; a Railway Hobby account to deploy it</td>
 </tr>
 <tr class="even">
 <td>Voiceover</td>
@@ -1227,7 +1227,7 @@ Kerry Back, Rice University
 <section id="example-a-bond-calculator" class="slide level2">
 <h2>Example: a bond calculator</h2>
 <div style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.45;">
-<p>Ask AI to build a single-page HTML bond calculator app. Inputs are face value, annual coupon rate, payments per year, years to maturity, and yield to maturity, an annual rate compounded at the payment frequency. Show the price, Macaulay duration, modified duration, and convexity, and a chart of price against yield with the input yield marked.</p>
+<p>Ask AI to build a single-page HTML bond calculator app. Inputs are face value, annual coupon rate, payments per year, years to maturity, and yield to maturity, an annual rate compounded at the payment frequency. Show the price, Macaulay duration, modified duration, and convexity (in years squared), and a chart of price against yield with the input yield marked.</p>
 </div>
 <p><span class="eyebrow">Needs: any Claude app</span></p>
 </section>
@@ -1431,11 +1431,11 @@ Kerry Back, Rice University
 <div style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.45;">
 <ol type="1">
 <li>Create GitHub and Railway accounts.</li>
-<li>Ask Claude to install the GitHub and Railway CLIs.</li>
+<li>Ask AI to install the GitHub and Railway CLIs.</li>
 <li>In a terminal, run <code>gh auth login</code> and <code>railway login</code>. Each opens your browser to sign in.</li>
-<li>Ask Claude to rewrite the bond pricing app as a FastAPI app in a new Git repo.</li>
-<li>Ask Claude to push the repo to GitHub.</li>
-<li>Ask Claude to create and deploy a new Railway service connected to the GitHub repo.</li>
+<li>Ask AI to rewrite the bond pricing app as a FastAPI app in a new Git repo.</li>
+<li>Ask AI to push the repo to GitHub.</li>
+<li>Ask AI to create and deploy a new Railway service connected to the GitHub repo.</li>
 </ol>
 </div>
 <p><span class="eyebrow">Needs: Claude Code, GitHub and Railway accounts, Python</span></p>
@@ -1444,9 +1444,9 @@ Kerry Back, Rice University
 <h2>Using Docker and skipping GitHub</h2>
 <div style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.45;">
 <ul>
-<li>Instead of using GitHub, you can ask Claude to install Docker.</li>
-<li>Then ask Claude to build a Dockerfile and Docker image for the app.</li>
-<li>Then ask Claude to create a new Railway service using the Docker image.</li>
+<li>Instead of using GitHub, you can ask AI to install Docker.</li>
+<li>Then ask AI to build a Dockerfile and Docker image for the app.</li>
+<li>Then ask AI to create a new Railway service using the Docker image.</li>
 </ul>
 </div>
 </section>
@@ -1455,7 +1455,7 @@ Kerry Back, Rice University
 <div style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.45;">
 <ul>
 <li>Another alternative is to deploy the single-page HTML app using GitHub Pages.</li>
-<li>Ask Claude to use the GitHub API to set up GitHub pages and to deploy the app.</li>
+<li>Ask AI to use the GitHub API to set up GitHub pages and to deploy the app.</li>
 </ul>
 </div>
 </section>
@@ -1464,8 +1464,8 @@ Kerry Back, Rice University
 <div class="steps">
 <ol type="1">
 <li>Buy a domain from a registrar (e.g., DNSimple), for about $15 a year — for example, myname.com.</li>
-<li>Tell Claude to use the registrar’s CLI or API to create a custom domain for the app – for example, myapp.myname.com.</li>
-<li>Tell Claude to use the Railway CLI (or GitHub API for GitHub Pages) to redirect the app to your custom domain.</li>
+<li>Tell AI to use the registrar’s CLI or API to create a custom domain for the app – for example, myapp.myname.com.</li>
+<li>Tell AI to use the Railway CLI (or GitHub API for GitHub Pages) to redirect the app to your custom domain.</li>
 </ol>
 </div>
 <div class="note">
@@ -1546,6 +1546,7 @@ Kerry Back, Rice University
 <h2>What “exposes tools” means</h2>
 <div style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.45;">
 <ul>
+<li>The harness is the program that sends your messages to the model and runs the tools it asks for: Claude Code, ChatGPT.</li>
 <li>The server gives the harness a text description of each tool: name, purpose, and inputs.</li>
 <li>The harness sends the descriptions to the model with each request.</li>
 <li>The model returns a tool call. The harness sends it to the server, and the server runs the tool.</li>
@@ -2022,9 +2023,9 @@ Kerry Back, Rice University
 <div style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.45;">
 <ul>
 <li>AI can write MCP servers for us.</li>
-<li>Ask Claude to create an MCP server with tools to return all datasets in French’s data library.</li>
-<li>Ask Claude how to launch it and connect it as a local server.</li>
-<li>Or, ask Claude to deploy it on Railway and connect it to Claude via the URL supplied by Railway.</li>
+<li>Ask AI to create an MCP server with tools to return all datasets in French’s data library.</li>
+<li>Ask AI how to launch it and connect it as a local server.</li>
+<li>Or, ask AI to deploy it on Railway and connect it to Claude via the URL supplied by Railway.</li>
 </ul>
 </div>
 <p><span class="eyebrow">Needs: Claude Code, Python; a Railway account to deploy</span></p>
@@ -2059,7 +2060,7 @@ Kerry Back, Rice University
 <h2>Example</h2>
 <div style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.45;">
 <ul>
-<li>Tell Claude you want a skill for deploying FastAPI apps at Railway.<br>
+<li>Tell AI you want a skill for deploying FastAPI apps at Railway.<br>
 </li>
 <li>And another skill for deploying single-page HTML apps at GitHub pages.</li>
 <li>After the skill is created, start a new conversation to make it available.</li>
@@ -2135,8 +2136,8 @@ Kerry Back, Rice University
 <h2>Example</h2>
 <div style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.45;">
 <ul>
-<li>Tell Claude to create a skill for computing monthly returns using the yfinance Python library and adjusted closing prices from Yahoo Finance.</li>
-<li>Tell Claude to publish a plugin marketplace containing the skill.</li>
+<li>Tell AI to create a skill for computing monthly returns using the yfinance Python library and adjusted closing prices from Yahoo Finance.</li>
+<li>Tell AI to publish a plugin marketplace containing the skill.</li>
 </ul>
 </div>
 <p><span class="eyebrow">Needs: Claude Code, a GitHub account, Python</span></p>
@@ -2145,8 +2146,8 @@ Kerry Back, Rice University
 <h2>More examples</h2>
 <div style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.45;">
 <ul>
-<li>Ask Claude to install the research plugin from <code>kerryback/kerryback-public</code>, and ask Claude what it does and how to work with it.</li>
-<li>Ask Claude about the skills and plugins in Lu Han’s GitHub repos: <a href="https://github.com/hanlulong">github.com/hanlulong</a>.</li>
+<li>Ask AI to install the research plugin from <code>kerryback/kerryback-public</code>, and ask AI what it does and how to work with it.</li>
+<li>Ask AI about the skills and plugins in Lu Han’s GitHub repos: <a href="https://github.com/hanlulong">github.com/hanlulong</a>.</li>
 </ul>
 </div>
 </section></section>
@@ -2227,7 +2228,7 @@ Kerry Back, Rice University
 <p><span class="step-title">Start with the Claude Code (or Codex) harness and tools</span></p>
 </div>
 <div class="step-card">
-<p><span class="step-title">Add tools from MCP connectors</span></p>
+<p><span class="step-title">Add tools from MCP servers</span></p>
 </div>
 <div class="step-card">
 <p><span class="step-title">Remove the tools you don’t want</span></p>
@@ -2264,7 +2265,7 @@ WebSearch   WebFetch    Agent</code></pre>
 <tr class="odd">
 <td>Built in</td>
 <td>in the harness</td>
-<td>In the agent’s own process, on the machine that started it. Its filesystem, its shell, its network: the agent’s reach is the machine’s reach.</td>
+<td>In the agent’s own process, on the machine that started it. Its filesystem, its shell, its network: the agent’s reach is the machine’s reach. Some built-ins, such as web search, run on the model provider’s servers instead.</td>
 <td>read a file, run a command, fetch a page</td>
 </tr>
 <tr class="even">
@@ -2670,7 +2671,7 @@ railway domain binomial.tutors.school.edu --port 8000 --service web</code></pre>
 <div style="font-size: 1.3em; margin-top: 0.6em; line-height: 1.45;">
 <p>Take the topic you selected earlier. Build a tutor for it.</p>
 </div>
-<p><span class="eyebrow">Needs: Claude Code, Python 3.11 or later, an Anthropic API key; a Railway account to deploy</span></p>
+<p><span class="eyebrow">Needs: Claude Code, Python 3.11 or later, an Anthropic API key; a Railway Hobby account to deploy</span></p>
 </section>
 <section id="narrated-slide-decks" class="slide level2 divider">
 <h2>Narrated slide decks</h2>
@@ -3049,16 +3050,16 @@ railway domain binomial.tutors.school.edu --port 8000 --service web</code></pre>
 </section>
 <section id="how-the-limits-work" class="slide level2">
 <h2>How the limits work</h2>
-<div style="font-size: 1.3em; line-height: 1.45; margin-top: 0.4em;">
+<div style="font-size: 1.05em; line-height: 1.35; margin-top: 0.3em;">
 <ul>
-<li>The Send button calls <code>POST /api/email/send</code>.</li>
-<li><code>SKILL.md</code> does not list that route, and tells the agent there is no send endpoint.</li>
-<li>The app does not check who calls the route.</li>
-<li>So the limit on the agent is an instruction, not a permission.</li>
+<li>The Send button calls <code>POST /api/email/send</code>. The agent’s shell can reach that route too, and so can the routes that edit, delete, and apply.</li>
+<li><code>SKILL.md</code> lists those routes and tells the agent never to call them. That is an instruction, not a permission.</li>
+<li>A hook in the plugin checks each tool call and blocks any call that names those routes. It matches text, so a disguised request can get past it.</li>
+<li>The app rejects those routes unless the request carries a token that it makes at launch and puts in the browser’s page. That stops a stray <code>curl</code>, not an agent that reads the page first.</li>
 </ul>
 </div>
 <div class="note">
-<p>The same applies to the routes that edit events, apply proposals, and delete events. A stronger limit would have the app require something only the browser holds, or block the route in the agent’s permissions.</p>
+<p>Each layer makes a mistake less likely. None is a hard limit: the agent can also read the Google sign-in tokens in <code>~/.smithers</code> and go around the app.</p>
 </div>
 </section>
 <section id="mail-is-untrusted-input" class="slide level2">

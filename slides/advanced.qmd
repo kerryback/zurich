@@ -137,7 +137,7 @@ Market events are mapped to vectors (like tokens are mapped in an LLM).  The mod
 
 - Anthropic, OpenAI, and Google generally will not give you their models.  They are proprietary (closed-weight).
 - There are (non-frontier) exceptions:  Google provides gemma models, and OpenAI provides gpt-oss models.  Nvidia provides nemotron.
-- Meta (Muse), Mistral (French company), and Chinese providers (DeepSeek, Alibaba, ...) give away their models (open-weight).
+- Meta (Muse Spark Open, Muse Glimmer), Mistral (French company), and Chinese providers (DeepSeek, Alibaba, ...) give away their models (open-weight).
 
 ## The frontier: open weights {.shrink}
 
@@ -149,9 +149,10 @@ Market events are mapped to vectors (like tokens are mapped in an LLM).  The mod
 | DeepSeek | DeepSeek V4 Pro | Apr 2026 | 1.32 / 3.96 |
 | NVIDIA | Nemotron 3 Ultra | Jun 2026 | free |
 | Mistral | Mistral Large 4 | Oct 2026 | 0.70 / 2.10 |
+| Meta | Muse Spark Open | Oct 2026 | 1.25 / 4.25\* |
 
 ::: {.note}
-Open weights means anyone can download the model and run it on their own hardware. The prices are for the developer's hosting; DeepSeek charges half off-peak.
+Open weights means anyone can download the model and run it on their own hardware. The prices are for the developer's hosting; DeepSeek charges half off-peak. \* Meta offers no API; this is the price at third-party hosts (OpenRouter).
 :::
 
 [Prices as of November 3, 2026]{.eyebrow}
@@ -160,9 +161,13 @@ Open weights means anyone can download the model and run it on their own hardwar
 
 ![](images/lag-gap.png){height=330 fig-align="center"}
 
-GPQA Diamond is near its ceiling: five months of lag is worth 2.5 points. On Terminal-Bench 2.1, Kimi K3 trails the best closed model by 7 points and Qwen 3.8 27B by 29.
+GPQA Diamond is near its ceiling: the gaps are a few questions out of 198, within noise. On Terminal-Bench 2.1, Kimi K3 trails the best closed model by 7 points and Qwen 3.8 27B by 29.
 
-## How it works
+::: {.note style="font-size:0.8em"}
+GPQA Diamond: graduate-level science questions. Terminal-Bench, DeepSWE, SWE-bench: coding and command-line tasks done by an agent.
+:::
+
+## Running a model locally: four parts
 
 :::: {style="font-size:0.85em"}
 ::: {.cards .cards-4}
@@ -182,6 +187,8 @@ Pick a size that fits in your memory
 :::
 ::: {.card .card-dark}
 [Harness + tools]{.card-title}
+
+The program that sends messages to the model and runs the tools it asks for
 
 Claude Code, Codex, OpenCode --- CLI, not desktop app
 
@@ -216,10 +223,10 @@ Adapt instructions to fit the harness and the model.  A smaller model needs shor
 :::
 
 ::: {.note}
-Output: [mortgage_amortization_qwen3.8-27b.xlsx](https://zurich.kerryback.com/files/mortgage_amortization_qwen3.8-27b.xlsx)
+The xlsx-local skill tells the model to use PMT, IPMT, and PPMT and gives the cell layout. Output: [mortgage_amortization_qwen3.8-27b.xlsx](https://kerryback.github.io/zurich/files/mortgage_amortization_qwen3.8-27b.xlsx)
 :::
 
-## Example
+## Try it: Ollama in three steps
 
 ::: {.step-flow-3}
 ::: {.step-card}
@@ -257,7 +264,7 @@ Set the context length to 64K in the Ollama app's settings before starting the a
 ## Windows laptops with NVIDIA RTX Spark
 
 ::: {.highlight-box}
-NVIDIA's RTX Spark (N1X) puts an Arm CPU and a Blackwell GPU on one chip, sharing one pool of memory --- the design Apple uses in its M-series chips. Preorders are open; the first Windows laptops ship October 16, 2026.
+NVIDIA's RTX Spark (N1X) puts an Arm CPU and a Blackwell GPU on one chip, sharing one pool of memory --- the design Apple uses in its M-series chips. Windows laptops with it have shipped since October 16, 2026.
 :::
 
 ::: {.comparison-table}
@@ -337,7 +344,7 @@ Fine-tuning does not add knowledge reliably.
 ::: {.card}
 [A fixed output format]{.card-title}
 
-A label, a JSON record, a field in another system. Prompting gets the format most of the time.
+A label, a JSON record, a field in another system. Prompting gets the format right most of the time; fine-tuning is for when most is not enough.
 :::
 
 ::: {.card .card-dark}
@@ -355,12 +362,12 @@ A small fine-tuned model can match a large prompted one on one narrow task, at a
 
 ## Fine-tuning in finance {.shrink}
 
-| Firm | What was fine-tuned | Reported result |
+| Firm | What was fine-tuned | Result, as reported by the firm |
 |---|---|---|
 | Bridgewater, with Thinking Machines | An open-weight model on examples labeled by its investment experts: is a document relevant, and where does the boilerplate begin | 84.7% average accuracy on six tasks; frontier models with expert prompts in the mid-to-high 70s; 13.8× cheaper per task |
-| RavenPack | Nemotron 3 Nano (4B) on labels from Nemotron 3 Super (120B) | Matched the large model on about 96% of sentence labels at 39× the throughput |
-| Balyasny | GPT-4o on hindsight-guided merger-arbitrage reports | Brier score 0.151, against 0.199 for market-implied odds |
-| JPMorgan (patent application) | An LLM with LoRA, labeled by forward-return quintiles relative to peers | Buy, hold, and sell ratings; no results reported |
+| RavenPack | Nemotron 3 Nano (4B) on labels from Nemotron 3 Super (120B) | Agreed with the large model on about 96% of sentence labels (agreement, not accuracy), at 39× the throughput |
+| Balyasny | GPT-4o on hindsight-guided merger-arbitrage reports | Brier score (lower is better) 0.151, against 0.199 for market-implied odds |
+| JPMorgan (patent application) | A model with LoRA, labeled by forward-return quintiles relative to peers | Buy, hold, and sell ratings; no results reported |
 | Mantic | gpt-oss-120b, by reinforcement learning on about 10,000 yes-or-no questions | A published research experiment; Mantic sells forecasts to hedge funds |
 
 [AI Street: July 2, May 19, September 16, September 24, and October 22, 2026; Jajal et al., ICML 2026]{.eyebrow}
@@ -433,7 +440,7 @@ Each layer of a neural network starts with a matrix multiplication. Then add a v
 
 Create a new $M \times N$ matrix as the product of $M \times K$ and $K \times N$ matrices for small $K$. Add this to the original frozen $M\times N$ matrix.
 
-- Example: $50 \times 2$ and $2 \times 100$, which is 300 parameters.
+- Example: $50 \times 2$ and $2 \times 100$, which is 300 trainable parameters instead of 5,000.
 :::
 :::
 
@@ -453,7 +460,7 @@ Weights stored at 4 bits instead of 16. Gemma 3 1B goes from about 2 GB to about
 ::: {.card .card-dark}
 [Adapters on top of it]{.card-title}
 
-The frozen weights are read at 4 bits; the small matrices train at full precision. A 70-billion-parameter model fits on one 48 GB GPU.
+The frozen weights are read at 4 bits; the small matrices train at full precision. A 65-billion-parameter model fits on one 48 GB GPU.
 :::
 :::
 
@@ -468,7 +475,7 @@ Dettmers et al., 2023. This is what puts fine-tuning on a free Colab T4, which h
 ::: {.steps}
 1. Load Gemma 3 1B at 4 bits.
 2. Attach rank-16 adapters to the attention layers, `q_proj` and `v_proj` only.
-3. Train on Financial PhraseBank: 2,264 news sentences that every annotator labeled the same way, positive, negative or neutral.
+3. Train on Financial PhraseBank: 2,264 news sentences that every annotator labeled the same way, positive, negative or neutral; 90% for training, 10% held back.
 4. Run three test sentences through the model before and after.
 :::
 
@@ -480,10 +487,10 @@ Needs a Hugging Face account, a read token, and Google's Gemma license accepted 
 
 # Security {background-image="images/zurich-fraumuenster.jpg" background-size="40.625% 100%" background-position="right"}
 
-## Three risks
+## Where the risks come from
 
 ::: {.steps}
-1. Sending data to an LLM → risks of [training on your data]{.accent} and [data breach]{.accent}
+1. Sending data to a model provider → risks of [training on your data]{.accent} and [data breach]{.accent}
 2. Letting an agent read unverified sources → risk of [prompt injection]{.accent}
 3. If the agent can also reach data → risk of [data exfiltration]{.accent}
 :::
@@ -517,7 +524,7 @@ The hosting and infrastructure vendors listed in the provider's data processing 
 
 ## Training and retention: contractual solutions {.shrink}
 
-A no-train, zero-retention data processing agreement (DPA), plus a business associate agreement (BAA) for protected health information, is available with a standard commercial API account.
+A no-train, zero-retention data processing agreement (DPA), plus a business associate agreement (BAA) for protected health information, can be requested with a standard commercial API account.
 
 | | What it adds | Enough for |
 |---|---|---|
@@ -539,7 +546,7 @@ The model cannot tell an instruction from a piece of content. Both arrive as tex
 Text placed where the agent will read it (an email, a document, a web page, a spreadsheet cell) is read in the same way as text you typed. An attacker needs no credentials, only a way to get words in front of the model.
 
 ::: {.note}
-OWASP has ranked this first among risks to LLM applications since 2025.
+OWASP has ranked this first among risks to LLM applications since its first list in 2023.
 :::
 
 ## Why agents are more exposed
@@ -566,8 +573,8 @@ A tool result re-enters the context as text, in the same stream as your question
 [CVE-2025-32711 · Microsoft 365 Copilot · June 2025]{.eyebrow}
 
 ::: {.steps}
-1. An attacker mails the victim a message containing instructions invisible to a human reader.
-2. The victim asks Copilot to summarize their email. Copilot reads the hidden instructions.
+1. An attacker mails the victim a message containing instructions aimed at Copilot, written so they read as ordinary text to a person.
+2. The victim asks Copilot to summarize their email. Copilot reads the instructions.
 3. Following them, Copilot places confidential data inside a URL in its response.
 4. The victim's browser fetches that URL automatically.
 5. The attacker reads the data out of their own server log.
@@ -600,6 +607,8 @@ Any way for text to leave: fetching a URL, sending mail, writing somewhere share
 :::
 
 All three in one agent is the condition for data exfiltration. Remove any one and the attack does not work. Copilot had all three: it read untrusted email, reached private data, and rendered URLs.
+
+[Simon Willison calls this the "lethal trifecta" (June 2025).]{.eyebrow}
 
 ## Removing a leg: a data-only agent
 
